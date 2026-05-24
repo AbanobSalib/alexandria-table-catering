@@ -6,5 +6,9 @@ make_may_invoice.py
 *.jpg
 *.jpeg
 *.heic
+!assets/*.svg
+!assets/*.png
+!assets/*.jpg
+!assets/*.jpeg
 .DS_Store
 .08355B0C-3911-4374-9790-DE7F59195BE9-YjvA

@@ -1,24 +1,24 @@
-# Social Launch Kit
+# Sofret Mariane Social Launch Kit
 
 ## Brand name options
 
-- Alexandria Table
-- Beit Eskenderia Catering
-- Sofret Alex
+- Sofret Mariane
+- Mariane's Table
+- Beit Mariane Catering
 
 ## Instagram bio
 
-Home-style Egyptian catering in Alexandria. Family trays, office lunches, birthdays, and private events. Orders by WhatsApp 24-72 hours ahead.
+Certified home-style Egyptian catering by Mariane Anis in Alexandria. Family trays, office lunches, birthdays, and private events. Orders by WhatsApp 48-72 hours ahead.
 
 ## Facebook page description
 
-Alexandria Table is a home-based catering kitchen in Alexandria, Egypt, serving warm Egyptian trays and polished event packages for family gatherings, birthdays, office lunches, and private occasions. Menus are confirmed personally by guest count, budget, delivery area, and dietary needs.
+Sofret Mariane is a certified home-based catering kitchen by Mariane Anis in Alexandria, Egypt, serving warm Egyptian trays and polished event packages for family gatherings, birthdays, office lunches, and private occasions. Menus are confirmed personally by guest count, budget, delivery area, and dietary needs.
 
 ## First posts
 
 ### Launch post
 
-Alexandria Table is now taking catering orders in Alexandria. Choose family trays, office lunch packages, or a custom menu for your next gathering. Send the date, guest count, area, and favorite dishes by WhatsApp for a quote.
+Sofret Mariane is now taking catering orders in Alexandria. Choose family trays, office lunch packages, or a custom menu for your next gathering. Send the date, guest count, area, and favorite dishes by WhatsApp for a quote.
 
 ### Menu post
 

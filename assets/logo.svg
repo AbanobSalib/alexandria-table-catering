@@ -1,0 +1,14 @@
+<svg width="320" height="320" viewBox="0 0 320 320" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Sofret Mariane logo</title>
+  <desc id="desc">A refined plate monogram with the letters SM and a small chef mark.</desc>
+  <rect width="320" height="320" rx="76" fill="#FFF8EE"/>
+  <circle cx="160" cy="160" r="112" fill="#28382F"/>
+  <circle cx="160" cy="160" r="88" stroke="#E5BD79" stroke-width="8"/>
+  <path d="M101 192C108 212 127 226 151 226C178 226 196 211 196 190C196 169 180 158 153 151C132 146 122 141 122 129C122 118 132 110 148 110C164 110 175 118 181 133L199 124C190 102 172 91 148 91C123 91 104 106 104 130C104 151 119 162 147 169C169 174 178 181 178 193C178 203 168 207 152 207C136 207 124 200 119 184L101 192Z" fill="#FFF8EE"/>
+  <path d="M204 222V98H226L260 172L294 98H316V222H296V135L267 199H252L224 136V222H204Z" fill="#FFF8EE" transform="translate(-24 0)"/>
+  <path d="M130 80C130 66 141 55 155 55H165C179 55 190 66 190 80V84H130V80Z" fill="#D2603D"/>
+  <path d="M118 87H202" stroke="#E5BD79" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="118" cy="80" r="13" fill="#FFF8EE"/>
+  <circle cx="160" cy="61" r="15" fill="#FFF8EE"/>
+  <circle cx="202" cy="80" r="13" fill="#FFF8EE"/>
+</svg>
