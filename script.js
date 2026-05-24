@@ -1,4 +1,4 @@
-const CHEF_WHATSAPP_NUMBER = "201000000000";
+const CHEF_WHATSAPP_NUMBER = "";
 
 const quoteForm = document.querySelector("#quoteForm");
 
@@ -23,6 +23,12 @@ quoteForm?.addEventListener("submit", (event) => {
     `Menu notes: ${details.message}`,
   ].join("\n");
 
-  const url = `https://wa.me/${CHEF_WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`;
-  window.open(url, "_blank", "noopener,noreferrer");
+  if (CHEF_WHATSAPP_NUMBER) {
+    const url = `https://wa.me/${CHEF_WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`;
+    window.open(url, "_blank", "noopener,noreferrer");
+    return;
+  }
+
+  navigator.clipboard?.writeText(text);
+  alert("Your catering message is ready. The chef's WhatsApp number will be added before paid orders open.");
 });
