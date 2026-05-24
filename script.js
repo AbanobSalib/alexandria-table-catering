@@ -15,6 +15,8 @@ const extraRanges = {
 const quoteForm = document.querySelector("#quoteForm");
 const estimateForm = document.querySelector("#estimateForm");
 const estimateOutput = document.querySelector("#estimateOutput");
+const scrollProgress = document.querySelector(".scroll-progress");
+const navLinks = [...document.querySelectorAll("nav a[href^='#']")];
 
 const formatEgp = (amount) =>
   new Intl.NumberFormat("en-EG", {
@@ -54,11 +56,29 @@ const revealObserver = new IntersectionObserver(
 );
 
 document
-  .querySelectorAll(".chef-section, .intro, .section-heading, .package, .menu-category, .estimate-section, .steps li, .trust-grid article, .contact")
+  .querySelectorAll(".chef-section, .signature-section, .intro, .event-section, .section-heading, .package, .proof-section, .menu-category, .estimate-section, .steps li, .trust-grid article, .faq-section, .contact")
   .forEach((element) => {
     element.setAttribute("data-reveal", "");
     revealObserver.observe(element);
   });
+
+const updateScrollUi = () => {
+  const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+  const progress = scrollable > 0 ? (window.scrollY / scrollable) * 100 : 0;
+  if (scrollProgress) scrollProgress.style.width = `${progress}%`;
+
+  const active = navLinks
+    .map((link) => document.querySelector(link.getAttribute("href")))
+    .filter(Boolean)
+    .findLast((section) => section.getBoundingClientRect().top <= 120);
+
+  navLinks.forEach((link) => {
+    link.classList.toggle("is-active", active && link.getAttribute("href") === `#${active.id}`);
+  });
+};
+
+window.addEventListener("scroll", updateScrollUi, { passive: true });
+updateScrollUi();
 
 quoteForm?.addEventListener("submit", (event) => {
   event.preventDefault();

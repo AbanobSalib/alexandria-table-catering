@@ -12,4 +12,8 @@ Static catering website for Mariane Anis, a certified home-based Egyptian chef i
 
 ## GitHub Pages
 
-This site is built as plain HTML, CSS, and JavaScript. It can be hosted directly with GitHub Pages from the `main` branch root.
+This site is built as plain HTML, CSS, and JavaScript. It is configured for:
+
+`https://abanobsalib.github.io/sofret-mariane-catering/`
+
+Production assets and account setup notes are in `platform-release-kit.md`.
