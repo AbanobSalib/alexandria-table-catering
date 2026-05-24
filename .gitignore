@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+make_may_invoice.py
+*.pdf
+*.png
+*.jpg
+*.jpeg
+*.heic
+.DS_Store
+.08355B0C-3911-4374-9790-DE7F59195BE9-YjvA
