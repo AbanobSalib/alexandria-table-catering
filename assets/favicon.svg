@@ -1,7 +1,21 @@
-<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="64" height="64" rx="16" fill="#FFF8EE"/>
-  <circle cx="32" cy="32" r="24" fill="#28382F"/>
-  <path d="M19 39C21 44 26 47 31 47C38 47 42 43 42 38C42 33 38 30 31 29C27 28 25 27 25 24C25 22 27 20 30 20C34 20 36 22 38 25L42 23C40 18 36 16 30 16C24 16 20 20 20 25C20 30 24 33 30 34C35 35 37 37 37 39C37 42 35 43 31 43C27 43 24 41 23 37L19 39Z" fill="#FFF8EE"/>
-  <path d="M39 45V19H44L51 34L58 19H63V45H59V26L53 40H49L43 26V45H39Z" fill="#FFF8EE" transform="translate(-9 0)"/>
-  <path d="M25 17C25 14 28 11 31 11H33C36 11 39 14 39 17H25Z" fill="#D2603D"/>
+<svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%"  stop-color="#1c3128"/>
+      <stop offset="100%" stop-color="#0d1812"/>
+    </linearGradient>
+    <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"  stop-color="#fff2c8"/>
+      <stop offset="100%" stop-color="#c39a52"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="14" fill="url(#bg)"/>
+  <circle cx="32" cy="32" r="26" fill="none" stroke="url(#g)" stroke-width="1.4" opacity="0.65"/>
+  <!-- Serving dome -->
+  <g transform="translate(32 19)" fill="url(#g)">
+    <path d="M-9 3 Q-9 -5 0 -5 Q9 -5 9 3 Z"/>
+    <rect x="-10" y="3" width="20" height="1.6" rx="0.8"/>
+  </g>
+  <!-- Serif M monogram -->
+  <path d="M19 49 L19 27 L17 27 L17 25 L24 25 L32 41 L40 25 L47 25 L47 27 L45 27 L45 49 L47 49 L47 51 L39 51 L39 49 L41 49 L41 30 L33 47 L31 47 L23 30 L23 49 L25 49 L25 51 L17 51 L17 49 Z" fill="url(#g)"/>
 </svg>
