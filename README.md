@@ -1,30 +1,48 @@
 # Sofret Mariane
 
-Static catering website for Mariane Anis, a certified home-based Egyptian chef in Alexandria, Egypt.
+Certified Egyptian catering by Mariane Anis in Cleopatra, Alexandria — website, installable PWA, and Capacitor-ready iOS/Android wrapper. Built end-to-end as a single static site so it deploys to GitHub Pages, Netlify, Cloudflare Pages, or any host.
 
-## Project Structure
+## What's inside
 
-- `index.html` - production landing page.
-- `styles.css` - visual design, animation, responsive layout.
-- `script.js` - quote estimator, scroll effects, booking message behavior.
-- `assets/` - logo, portrait, favicon, social cover, and link-preview image.
-- `docs/` - social launch plan and platform release checklist.
-- `robots.txt`, `sitemap.xml`, `site.webmanifest` - release metadata.
+- `index.html` — landing page with hero, packages (small + big events), menu, gallery, reviews, location map, FAQ, contact, cart drawer, checkout modal, and order-confirmation modal. Fully bilingual (EN/AR with RTL).
+- `styles.css` — design system, animations, RTL support, modal + cart styles.
+- `script.js` — i18n, language toggle, cart state, checkout, Egyptian payment dispatch (InstaPay, Vodafone Cash, bank, card, COD), PWA install prompt, scroll/parallax/counter animations.
+- `sw.js` — service worker (network-first HTML, cache-first static, stale-while-revalidate for cross-origin).
+- `site.webmanifest` — installable PWA with app shortcuts (`Order`, `Estimate`, `WhatsApp`).
+- `capacitor.config.json` + `package.json` — wrap the PWA as native iOS / Android apps via Capacitor.
+- `assets/` — logo, portrait, favicon, social-share imagery.
+- `docs/social-launch-kit.md` — Facebook, Instagram, TikTok, WhatsApp Business, Google Business Profile setup.
+- `docs/platform-release-kit.md` — production checklist: business config, payment gateways, custom domain, App Store + Play Store submission.
 
-## Launch checklist
+## Run locally
 
-1. Add the chef's WhatsApp number in `script.js` using international format without `+`, for example `2010...`.
-2. Replace certification wording with the exact certificate/training name.
-3. Add real food photos when available. The current food images are remote placeholder food photography.
-4. Review menu prices before taking orders because ingredient prices change.
-5. Create the social profiles from `docs/social-launch-kit.md`, then update the footer links.
+```sh
+# Python
+python3 -m http.server 5173
 
-## GitHub Pages
+# or npm (no install needed)
+npx serve -l 5173 .
+```
 
-This site is built as plain HTML, CSS, and JavaScript. It is configured for:
+Open http://localhost:5173.
 
-`https://abanobsalib.github.io/sofret-mariane/`
+## Build the native app (optional)
 
-Production assets and account setup notes are in `docs/platform-release-kit.md`.
+```sh
+npm install
+npx cap add ios
+npx cap add android
+npx cap sync
+npx cap open ios       # opens Xcode
+npx cap open android   # opens Android Studio
+```
 
-The source repo is private. The public GitHub Pages deployment repo contains the static build needed for the live website.
+See `docs/platform-release-kit.md` Section 4 for full App Store / Play Store steps.
+
+## Deploy
+
+Push to `main` — GitHub Pages serves the live site at:
+
+https://abanobsalib.github.io/sofret-mariane/
+
+For a custom domain see `docs/platform-release-kit.md` Section 6.

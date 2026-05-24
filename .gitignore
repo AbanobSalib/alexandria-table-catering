@@ -12,3 +12,11 @@ make_may_invoice.py
 !assets/*.jpeg
 .DS_Store
 .08355B0C-3911-4374-9790-DE7F59195BE9-YjvA
+
+# Node / Capacitor scaffold (only generated when you run npm install + cap add)
+node_modules/
+ios/
+android/
+dist/
+.cache/
+*.log

@@ -1,0 +1,28 @@
+{
+  "appId": "com.sofretmariane.app",
+  "appName": "Sofret Mariane",
+  "webDir": ".",
+  "server": {
+    "androidScheme": "https",
+    "iosScheme": "https",
+    "cleartext": false,
+    "url": "https://abanobsalib.github.io/sofret-mariane/"
+  },
+  "ios": {
+    "contentInset": "always",
+    "scheme": "Sofret Mariane",
+    "backgroundColor": "#fbf5ea"
+  },
+  "android": {
+    "backgroundColor": "#fbf5ea",
+    "allowMixedContent": false
+  },
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 1200,
+      "backgroundColor": "#14241d",
+      "showSpinner": false,
+      "splashImmersive": true
+    }
+  }
+}
