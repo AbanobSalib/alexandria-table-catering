@@ -1,12 +1,11 @@
 {
   "appId": "com.sofretmariane.app",
   "appName": "Sofret Mariane",
-  "webDir": ".",
+  "webDir": "dist",
   "server": {
     "androidScheme": "https",
     "iosScheme": "https",
-    "cleartext": false,
-    "url": "https://abanobsalib.github.io/sofret-mariane/"
+    "cleartext": false
   },
   "ios": {
     "contentInset": "always",

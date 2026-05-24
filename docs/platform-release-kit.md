@@ -24,7 +24,7 @@ Open **`script.js`** at the top — replace the `CONFIG` block:
 
 ```js
 const CONFIG = {
-  whatsapp: "20XXXXXXXXXX",         // chef's WhatsApp Business (no +)
+  whatsapp: "201223226196",         // chef's WhatsApp Business (no +)
   instapayHandle: "name@bank",      // chef's InstaPay address
   vodafoneCash: "01XXXXXXXXX",      // Vodafone Cash wallet number
   bank: {
@@ -38,12 +38,12 @@ const CONFIG = {
 };
 ```
 
-Then do a global search-replace across `index.html` for these placeholders:
+Then confirm these live values across `index.html`:
 
 | Find | Replace with |
 |------|--------------|
-| `+20 100 000 0000` | your real number, formatted |
-| `wa.me/201000000000` | `wa.me/<real-international-no-plus>` |
+| `+20 122 322 6196` | Mariane's formatted number |
+| `wa.me/201223226196` | Mariane's WhatsApp link |
 | `hello@sofretmariane.com` | your real email |
 | `facebook.com/sofretmariane` | real Facebook URL if handle differs |
 | `instagram.com/sofretmariane` | real Instagram URL |

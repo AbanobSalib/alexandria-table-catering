@@ -8,7 +8,7 @@
 
 /* ---------- CONFIG: set these to go live --------------------- */
 const CONFIG = {
-  /* Phone in international format WITHOUT the leading +. Example for +20 100 000 0000 → "201223226196" */
+  /* Phone in international format WITHOUT the leading +. +20 122 322 6196 → "201223226196" */
   whatsapp: "201223226196",
   /* InstaPay handle / IPA address (Egypt). Example: "mariane@instapay" */
   instapayHandle: "mariane@instapay",
@@ -24,6 +24,23 @@ const CONFIG = {
   },
   /* Paymob hosted-checkout URL. Set when you have a merchant account. Leave empty for now. */
   paymobCheckoutUrl: "",
+};
+
+const PLACEHOLDER_VALUES = new Set([
+  "",
+  "mariane@instapay",
+  "01000000000",
+  "0000-0000-0000-0000",
+  "EG0000000000000000000000000",
+]);
+
+const isRealValue = (value) => Boolean(value && !PLACEHOLDER_VALUES.has(String(value).trim()));
+const paymentConfigured = (method) => {
+  if (method === "instapay") return isRealValue(CONFIG.instapayHandle);
+  if (method === "vodafone") return isRealValue(CONFIG.vodafoneCash);
+  if (method === "bank") return isRealValue(CONFIG.bank.accountNumber) && isRealValue(CONFIG.bank.iban);
+  if (method === "card") return isRealValue(CONFIG.paymobCheckoutUrl);
+  return true;
 };
 
 /* ---------- I18N --------------------------------------------- */
@@ -54,6 +71,21 @@ const I18N = {
     "tracks.big.title": "Big Events",
     "tracks.big.body": "50–500+ guests. Weddings, engagements, corporate, conferences.",
     "tracks.big.cta": "See big-event packages →",
+    "presets.kicker": "Fast planning",
+    "presets.heading": "Tap the event closest to yours.",
+    "presets.body": "We pre-fill the quote helper with a realistic guest count and service level so you can message Mariane faster.",
+    "presets.family.tag": "Home table",
+    "presets.family.title": "Family lunch for 24",
+    "presets.family.body": "Main trays, mahshi, salads, dessert bites.",
+    "presets.office.tag": "Corporate",
+    "presets.office.title": "Office lunch for 36",
+    "presets.office.body": "Labeled trays, sealed sets, vegetarian option.",
+    "presets.wedding.tag": "Signature",
+    "presets.wedding.title": "Wedding buffet for 180",
+    "presets.wedding.body": "Hot buffet, dessert table, servers, setup.",
+    "presets.sea.tag": "Alexandria",
+    "presets.sea.title": "Seafood table for 18",
+    "presets.sea.body": "Sayadeya, grilled fish, mezze, coastal sides.",
     "chef.tag": "Chef Mariane Anis",
     "chef.kicker": "The chef",
     "chef.heading": "Certified chef. Warm Egyptian cooking. Professional event rhythm.",
@@ -71,6 +103,16 @@ const I18N = {
     "why.2.title": "Balanced portions", "why.2.body": "Trays are planned so the table looks generous without waste or last-minute confusion.",
     "why.3.title": "Elegant details", "why.3.body": "Labels, reheating notes, serving extras, and dessert add-ons keep hosting simple.",
     "why.4.title": "Alexandria rhythm", "why.4.body": "Seafood, grills, family classics, and office menus quoted around local delivery realities.",
+    "quality.kicker": "Why it feels premium",
+    "quality.heading": "Every order runs like a kitchen production.",
+    "quality.1.title": "Confirmed portions",
+    "quality.1.body": "Guest count, tray count, extras, and serving style are checked before deposit.",
+    "quality.2.title": "Hot arrival plan",
+    "quality.2.body": "Delivery timing is planned around traffic, setup, reheating, and serving order.",
+    "quality.3.title": "Labeled service",
+    "quality.3.body": "Trays can arrive labeled with allergens, spice level, and serving notes.",
+    "quality.4.title": "WhatsApp command line",
+    "quality.4.body": "Every quote, change, deposit, and final confirmation stays in one clear chat.",
     "occasions.kicker": "Occasions we cover",
     "occasions.heading": "Built for the way people actually gather.",
     "occasions.family.title": "Family celebrations", "occasions.family.body": "Birthdays, baptisms, Friday lunches, visits, and holiday tables.",
@@ -281,6 +323,21 @@ const I18N = {
     "tracks.big.title": "مناسبات كبيرة",
     "tracks.big.body": "من 50 إلى 500+ ضيف. أفراح، خطوبة، شركات، مؤتمرات.",
     "tracks.big.cta": "شاهد باقات الحفلات الكبيرة ←",
+    "presets.kicker": "تخطيط سريع",
+    "presets.heading": "اختار المناسبة الأقرب لطلبك.",
+    "presets.body": "بنجهز حاسبة السعر بعدد ضيوف وخدمة واقعية عشان تبعت لمريان أسرع.",
+    "presets.family.tag": "سفرة بيت",
+    "presets.family.title": "غداء عائلي لـ 24",
+    "presets.family.body": "صواني رئيسية، محشي، سلطات، حلويات صغيرة.",
+    "presets.office.tag": "شركات",
+    "presets.office.title": "غداء مكتب لـ 36",
+    "presets.office.body": "صواني بليبل، أدوات محكمة، خيار نباتي.",
+    "presets.wedding.tag": "سيجنتشر",
+    "presets.wedding.title": "بوفيه فرح لـ 180",
+    "presets.wedding.body": "بوفيه ساخن، طاولة حلويات، ويترز وتجهيز.",
+    "presets.sea.tag": "إسكندرية",
+    "presets.sea.title": "سفرة سي فود لـ 18",
+    "presets.sea.body": "صيادية، سمك مشوي، مزة، أطباق ساحلية.",
     "chef.tag": "الشيف مريان أنيس",
     "chef.kicker": "الشيف",
     "chef.heading": "شيف معتمدة. طبخ مصري دافي. تنظيم احترافي للمناسبات.",
@@ -298,6 +355,16 @@ const I18N = {
     "why.2.title": "كميات محسوبة", "why.2.body": "الصواني متجهزة عشان السفرة تبان عامرة من غير هدر أو لخبطة.",
     "why.3.title": "تفاصيل أنيقة", "why.3.body": "ليبل، ملاحظات تسخين، أدوات تقديم، وإضافات حلويات.",
     "why.4.title": "إيقاع إسكندري", "why.4.body": "سي فود، مشويات، أكلات بيتي، ومنيو مكتب بسعر يناسب التوصيل الداخلي.",
+    "quality.kicker": "ليه الخدمة بريميم",
+    "quality.heading": "كل طلب بيتدار كأنه إنتاج مطبخ كامل.",
+    "quality.1.title": "كميات مؤكدة",
+    "quality.1.body": "عدد الضيوف والصواني والإضافات وطريقة التقديم بيتراجعوا قبل العربون.",
+    "quality.2.title": "خطة وصول سخن",
+    "quality.2.body": "التوصيل بيتخطط حسب الزحمة والتجهيز والتسخين وترتيب التقديم.",
+    "quality.3.title": "خدمة بليبل",
+    "quality.3.body": "الصواني ممكن توصل بليبل للحساسية ودرجة الشطة وملاحظات التقديم.",
+    "quality.4.title": "واتساب واضح",
+    "quality.4.body": "كل عرض سعر وتعديل وعربون وتأكيد نهائي بيكون في شات واحد واضح.",
     "occasions.kicker": "المناسبات اللي بنغطيها",
     "occasions.heading": "متعمل عشان الطريقة اللي الناس بتتجمع بيها.",
     "occasions.family.title": "احتفالات عائلية", "occasions.family.body": "أعياد ميلاد، عمادة، غداء جمعة، زيارات، وسفرة الأعياد.",
@@ -509,6 +576,7 @@ const applyLang = (lang) => {
   /* refresh dynamic UI */
   refreshCartUI();
   updateEstimate();
+  syncPaymentReadiness();
 };
 
 const switchLang = () => {
@@ -573,13 +641,13 @@ const revealObserver = new IntersectionObserver(
 );
 
 const armReveals = () => {
-  $$("section, .package, .menu-category, .review-card, .signature-grid article, .event-grid article, .credential-grid article, .trust-grid article, .steps li").forEach((el) => {
+  $$("section, .package, .menu-category, .review-card, .preset-card, .signature-grid article, .quality-grid article, .event-grid article, .credential-grid article, .trust-grid article, .steps li").forEach((el) => {
     if (!el.hasAttribute("data-reveal")) {
       el.setAttribute("data-reveal", "");
       revealObserver.observe(el);
     }
   });
-  $$(".package-grid, .signature-grid, .event-grid, .menu-list, .review-grid, .credential-grid, .gallery-grid").forEach((el) => {
+  $$(".package-grid, .preset-grid, .signature-grid, .quality-grid, .event-grid, .menu-list, .review-grid, .credential-grid, .gallery-grid").forEach((el) => {
     if (!el.hasAttribute("data-reveal-stagger")) {
       el.setAttribute("data-reveal-stagger", "");
       revealObserver.observe(el);
@@ -614,6 +682,23 @@ $$(".track-card").forEach((card) => {
     const scope = card.dataset.scope;
     activatePackageTab(scope);
     document.querySelector("#packages")?.scrollIntoView({ behavior: "smooth", block: "start" });
+  });
+});
+
+/* ---------- fast quote presets ------------------------------ */
+$$(".preset-card").forEach((card) => {
+  card.addEventListener("click", () => {
+    if (!estimateForm) return;
+    const packageField = estimateForm.elements.package;
+    const guestsField = estimateForm.elements.estimateGuests;
+    const extrasField = estimateForm.elements.extras;
+    if (packageField) packageField.value = card.dataset.presetPackage || "family";
+    if (guestsField) guestsField.value = card.dataset.presetGuests || "20";
+    if (extrasField) extrasField.value = card.dataset.presetExtras || "none";
+    updateEstimate();
+    document.querySelector("#estimate")?.scrollIntoView({ behavior: "smooth", block: "center" });
+    card.classList.add("is-selected");
+    setTimeout(() => card.classList.remove("is-selected"), 900);
   });
 });
 
@@ -682,6 +767,27 @@ function updateEstimate() {
   }
 }
 estimateForm?.addEventListener("input", updateEstimate);
+
+/* ---------- payment readiness ------------------------------- */
+const syncPaymentReadiness = () => {
+  $$(".pay-option input[name='payment']").forEach((input) => {
+    const card = input.closest(".pay-option")?.querySelector(".pay-card");
+    const method = input.value;
+    const configured = paymentConfigured(method);
+    if (!card) return;
+    card.classList.toggle("needs-confirmation", !configured && method !== "cod");
+    const existing = card.querySelector(".pay-status");
+    existing?.remove();
+    if (!configured && method !== "cod") {
+      const status = document.createElement("em");
+      status.className = "pay-status";
+      status.textContent = document.documentElement.lang === "ar"
+        ? "التفاصيل المؤكدة على واتساب"
+        : "Verified details by WhatsApp";
+      card.appendChild(status);
+    }
+  });
+};
 
 /* ---------- CART -------------------------------------------- */
 const CART_KEY = "sm.cart";
@@ -939,8 +1045,17 @@ const buildOrderMessage = (order) => {
 const buildPaymentDetailsHTML = (method, totalText) => {
   const lang = document.documentElement.lang;
   const ar = lang === "ar";
+  const manualPayment = (title) => `
+    <div class="pay-block">
+      <strong>${title}</strong>
+      <p>${ar
+        ? "تفاصيل الدفع المؤكدة هتتبعت لك على واتساب بعد مراجعة الطلب والسعر النهائي."
+        : "Verified payment details will be sent on WhatsApp after Mariane reviews the order and confirms the final price."}</p>
+      <p>${ar ? "المبلغ التقديري" : "Estimated amount"}: <strong>${totalText}</strong></p>
+    </div>`;
   switch (method) {
     case "instapay": {
+      if (!paymentConfigured("instapay")) return manualPayment(ar ? "إنستاباي" : "InstaPay");
       const ipLink = `https://ipn.eg/S/${encodeURIComponent(CONFIG.instapayHandle.split("@")[0])}/instapay`;
       return `
         <div class="pay-block">
@@ -952,6 +1067,7 @@ const buildPaymentDetailsHTML = (method, totalText) => {
         </div>`;
     }
     case "vodafone":
+      if (!paymentConfigured("vodafone")) return manualPayment(ar ? "فودافون كاش" : "Vodafone Cash");
       return `
         <div class="pay-block">
           <strong>${ar ? "فودافون كاش" : "Vodafone Cash"}</strong>
@@ -960,6 +1076,7 @@ const buildPaymentDetailsHTML = (method, totalText) => {
           <p>${ar ? "المبلغ" : "Amount"}: <strong>${totalText}</strong></p>
         </div>`;
     case "bank":
+      if (!paymentConfigured("bank")) return manualPayment(ar ? "تحويل بنكي" : "Bank transfer");
       return `
         <div class="pay-block">
           <strong>${ar ? "تحويل بنكي" : "Bank transfer"}</strong>
@@ -1180,7 +1297,7 @@ if (heroRotator) {
 }
 
 /* ---------- 3D tilt on package + signature cards ------------ */
-const tiltTargets = $$(".package, .signature-grid article, .review-card");
+const tiltTargets = $$(".package, .preset-card, .signature-grid article, .quality-grid article, .review-card");
 tiltTargets.forEach((card) => {
   card.classList.add("tilt-card");
   /* wrap content so it floats forward */
@@ -1218,4 +1335,5 @@ if (hero && window.matchMedia("(hover: hover)").matches) {
 applyLang(getLang());
 armReveals();
 refreshCartUI();
+syncPaymentReadiness();
 onScroll();

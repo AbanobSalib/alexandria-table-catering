@@ -5,7 +5,7 @@ Step-by-step setup for every channel linked from the website. The site already p
 - `facebook.com/sofretmariane`
 - `instagram.com/sofretmariane`
 - `tiktok.com/@sofretmariane`
-- WhatsApp `+20 100 000 0000`
+- WhatsApp `+20 122 322 6196`
 - Google Maps → Cleopatra, Alexandria
 
 When you create each profile, **keep the same handle (`sofretmariane`)** so every link on the site works without code changes. If a handle is taken, choose ONE backup handle and tell me — I'll update every link.
@@ -22,7 +22,7 @@ When you create each profile, **keep the same handle (`sofretmariane`)** so ever
 - **Logo:** `assets/logo.svg` (export to PNG 1024×1024 for upload)
 - **Cover image:** `assets/social-cover.jpg` (1640×856)
 - **Website:** https://abanobsalib.github.io/sofret-mariane/
-- **WhatsApp:** wa.me/201000000000 (replace with the real number)
+- **WhatsApp:** https://wa.me/201223226196
 - **Service area:** Alexandria, North Coast, Cairo on request
 - **Hours:** Sat–Thu, 9:00–21:00
 
@@ -197,7 +197,7 @@ Open `script.js` and set:
 
 ```js
 const CONFIG = {
-  whatsapp: "20XXXXXXXXXX",      // real WhatsApp Business number
+  whatsapp: "201223226196",      // Mariane WhatsApp Business number
   instapayHandle: "name@bank",   // your InstaPay payment address
   vodafoneCash: "01XXXXXXXXX",   // wallet number
   bank: { name, accountName, accountNumber, iban, swift },
@@ -205,10 +205,10 @@ const CONFIG = {
 };
 ```
 
-Then update these href values in `index.html` (search-replace):
+Then confirm these href values in `index.html`:
 
-- `wa.me/201000000000` → real number
-- `+20 100 000 0000` → formatted phone
+- `wa.me/201223226196`
+- `+20 122 322 6196`
 - `hello@sofretmariane.com` → real inbox
 - `facebook.com/sofretmariane`, `instagram.com/sofretmariane`, `tiktok.com/@sofretmariane` if the handle differs
 
