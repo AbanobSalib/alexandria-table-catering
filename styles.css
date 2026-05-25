@@ -72,6 +72,7 @@ html[dir="rtl"] :is(h1, h2, h3, h4) {
 html {
   scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
+  overflow-x: clip;
 }
 
 body {
@@ -2421,6 +2422,8 @@ html[dir="rtl"] .cart-drawer {
 .marquee {
   position: relative;
   overflow: hidden;
+  contain: paint;
+  max-width: 100%;
   background: linear-gradient(135deg, #14241d, #1d3328);
   color: var(--gold);
   padding: 18px 0;
@@ -2451,6 +2454,7 @@ html[dir="rtl"] .marquee::after  { background: linear-gradient(90deg, #14241d, t
   align-items: center;
   gap: 32px;
   white-space: nowrap;
+  direction: ltr;
   font-family: var(--serif);
   font-size: clamp(1.6rem, 2.4vw, 2.6rem);
   font-weight: 600;
@@ -2725,6 +2729,7 @@ body::before { z-index: -1; }
   align-items: center;
   justify-content: center;
   width: 30px;
+  flex: 0 0 30px;
   height: 30px;
   border-radius: 50%;
   background: linear-gradient(135deg, var(--gold), var(--clay));
@@ -2734,19 +2739,38 @@ body::before { z-index: -1; }
 .quick-cta .qc-meta {
   display: flex;
   flex-direction: column;
+  flex: 1 1 auto;
+  min-width: 0;
   line-height: 1.15;
   font-size: 0.78rem;
   color: rgba(255, 255, 255, 0.78);
   font-weight: 600;
 }
-.quick-cta .qc-meta strong { color: white; font-size: 0.96rem; }
-.quick-cta .qc-arrow { color: var(--gold); font-size: 1.2rem; line-height: 1; }
+.quick-cta .qc-meta span,
+.quick-cta .qc-meta strong {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.quick-cta .qc-meta strong {
+  color: white;
+  direction: ltr;
+  font-size: 0.96rem;
+  unicode-bidi: isolate;
+}
+.quick-cta .qc-arrow { flex: 0 0 auto; color: var(--gold); font-size: 1.2rem; line-height: 1; }
 @keyframes quickPop {
   from { opacity: 0; transform: translateY(20px); }
   to   { opacity: 1; transform: translateY(0); }
 }
 @media (max-width: 720px) {
-  .quick-cta { display: inline-flex; }
+  .quick-cta {
+    display: flex;
+    inset-inline: auto;
+    left: 14px;
+    right: 14px;
+    width: auto;
+  }
   .whatsapp-fab { display: none; }
   .install-prompt {
     inset-inline: 14px;
