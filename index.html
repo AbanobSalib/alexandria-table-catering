@@ -46,7 +46,7 @@
     <link rel="preload" as="image" href="assets/mariane-anis-enhanced.jpg" />
 
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700;800;900&family=Cairo:wght@400;600;700;800&family=Amiri:wght@400;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css?v=sm-v4-0249a86-button-cache-fix" />
+    <link rel="stylesheet" href="styles.css?v=sm-v5-form-cta-mobile-fix" />
 
     <script type="application/ld+json">
       {
@@ -565,7 +565,7 @@
         <form id="estimateForm" class="estimate-card" aria-label="Catering estimate">
           <label>
             <span data-i18n="estimate.field.package">Package</span>
-            <select name="package">
+            <select id="packageSelect" name="package">
               <optgroup label="Small &amp; Home" data-i18n-attr="label" data-i18n="estimate.group.small">
                 <option value="family" data-i18n="estimate.opt.family">Beit Mariane Feast</option>
                 <option value="sea" data-i18n="estimate.opt.sea">Sea Breeze Table</option>
@@ -580,11 +580,11 @@
           </label>
           <label>
             <span data-i18n="estimate.field.guests">Guests</span>
-            <input name="estimateGuests" type="number" min="6" value="20" />
+            <input id="guestCount" name="estimateGuests" type="number" min="6" value="20" />
           </label>
           <label>
             <span data-i18n="estimate.field.extras">Extras</span>
-            <select name="extras">
+            <select id="extrasSelect" name="extras">
               <option value="none" data-i18n="estimate.extras.none">Food only</option>
               <option value="dessert" data-i18n="estimate.extras.dessert">+ Dessert table</option>
               <option value="serving" data-i18n="estimate.extras.serving">+ Dessert &amp; serving sets</option>
@@ -812,7 +812,7 @@
           </label>
           <label>
             <span data-i18n="contact.field.event">Event type</span>
-            <select name="event">
+            <select name="eventType">
               <option value="family" data-i18n="contact.event.family">Family gathering</option>
               <option value="office" data-i18n="contact.event.office">Office / corporate</option>
               <option value="birthday" data-i18n="contact.event.birthday">Birthday</option>
@@ -1014,11 +1014,11 @@
       </div>
     </footer>
 
-    <script src="script.js?v=sm-v4-0249a86-button-cache-fix"></script>
+    <script src="script.js?v=sm-v5-form-cta-mobile-fix"></script>
     <script>
       if ("serviceWorker" in navigator) {
         window.addEventListener("load", () => {
-          navigator.serviceWorker.register("sw.js?v=sm-v4-0249a86-button-cache-fix").catch(() => {});
+          navigator.serviceWorker.register("sw.js?v=sm-v5-form-cta-mobile-fix").catch(() => {});
         });
       }
     </script>

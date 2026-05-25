@@ -5,12 +5,12 @@
    - cache-first for images so the app feels snappy
 */
 
-const VERSION = "sm-v4-0249a86-button-cache-fix";
+const VERSION = "sm-v5-form-cta-mobile-fix";
 const SHELL = [
   "./",
   "index.html",
-  "styles.css?v=sm-v4-0249a86-button-cache-fix",
-  "script.js?v=sm-v4-0249a86-button-cache-fix",
+  "styles.css?v=sm-v5-form-cta-mobile-fix",
+  "script.js?v=sm-v5-form-cta-mobile-fix",
   "site.webmanifest",
   "assets/logo.svg",
   "assets/favicon.svg",

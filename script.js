@@ -744,7 +744,9 @@ function updateEstimate() {
   const [el, eh] = EXTRA_RANGES[extras] || EXTRA_RANGES.none;
   const low = guests * (pl + el);
   const high = guests * (ph + eh);
-  estimateOutput.value = `${formatEgp(low)} – ${formatEgp(high)}`;
+  const rangeText = `${formatEgp(low)} – ${formatEgp(high)}`;
+  estimateOutput.value = rangeText;
+  estimateOutput.textContent = rangeText;
 
   if (estimateWa) {
     const lang = document.documentElement.lang;
@@ -946,12 +948,12 @@ document.addEventListener("click", (e) => {
 
 /* ---------- package "Reserve" buttons ----------------------- */
 const PACKAGE_PRICING = {
-  family:  { name: "Beit Mariane Feast",       low: 185, high: 245, unit: "guest" },
-  sea:     { name: "Sea Breeze Table",         low: 285, high: 420, unit: "guest" },
-  office:  { name: "Office Lunch Drop-off",    low: 160, high: 230, unit: "guest" },
-  wedding: { name: "Wedding & Engagement",     low: 520, high: 950, unit: "guest" },
-  conf:    { name: "Conference & Launch",      low: 340, high: 560, unit: "guest" },
-  henna:   { name: "Henna & Engagement Night", low: 380, high: 620, unit: "guest" },
+  family:  { name: "Beit Mariane Feast",       low: 185, high: 245, unit: "guest", defaultGuests: 24 },
+  sea:     { name: "Sea Breeze Table",         low: 285, high: 420, unit: "guest", defaultGuests: 18 },
+  office:  { name: "Office Lunch Drop-off",    low: 160, high: 230, unit: "guest", defaultGuests: 36 },
+  wedding: { name: "Wedding & Engagement",     low: 520, high: 950, unit: "guest", defaultGuests: 180 },
+  conf:    { name: "Conference & Launch",      low: 340, high: 560, unit: "guest", defaultGuests: 80 },
+  henna:   { name: "Henna & Engagement Night", low: 380, high: 620, unit: "guest", defaultGuests: 90 },
 };
 
 $$(".package-cta").forEach((cta) => {
@@ -960,7 +962,8 @@ $$(".package-cta").forEach((cta) => {
     const key = cta.dataset.package;
     const pkg = PACKAGE_PRICING[key];
     if (!pkg) return;
-    const guests = Math.max(Number(prompt(document.documentElement.lang === "ar" ? "كام ضيف؟" : "How many guests?", "20")) || 20, 6);
+    const estimateGuests = Number($("#guestCount")?.value);
+    const guests = Math.max(estimateGuests || pkg.defaultGuests || 20, 6);
     addToCart({
       id: `pkg-${key}`,
       name: `${pkg.name} × ${guests} ${document.documentElement.lang === "ar" ? "ضيف" : "guests"}`,
@@ -969,6 +972,7 @@ $$(".package-cta").forEach((cta) => {
       unit: "",
       qty: 1,
     });
+    openCart();
   });
 });
 
@@ -1173,7 +1177,7 @@ $("#quoteForm")?.addEventListener("submit", (e) => {
         `التليفون: ${fd.get("phone")}`,
         `تاريخ المناسبة: ${fd.get("date")}`,
         `عدد الضيوف: ${fd.get("guests")}`,
-        `نوع المناسبة: ${fd.get("event")}`,
+        `نوع المناسبة: ${t(`contact.event.${fd.get("eventType") || "family"}`)}`,
         `المنطقة: ${fd.get("area") || "-"}`,
         `الطلب: ${fd.get("message")}`,
       ]
@@ -1183,7 +1187,7 @@ $("#quoteForm")?.addEventListener("submit", (e) => {
         `Phone: ${fd.get("phone")}`,
         `Event date: ${fd.get("date")}`,
         `Guests: ${fd.get("guests")}`,
-        `Event type: ${fd.get("event")}`,
+        `Event type: ${t(`contact.event.${fd.get("eventType") || "family"}`)}`,
         `Area: ${fd.get("area") || "-"}`,
         `Menu notes: ${fd.get("message")}`,
       ];
