@@ -67,6 +67,7 @@ html[dir="rtl"] :is(h1, h2, h3, h4) {
 
 * { box-sizing: border-box; }
 *::selection { background: rgba(210, 96, 61, 0.34); color: #fff; }
+[hidden] { display: none !important; }
 
 html {
   scroll-behavior: smooth;
@@ -2746,8 +2747,14 @@ body::before { z-index: -1; }
 }
 @media (max-width: 720px) {
   .quick-cta { display: inline-flex; }
-  .whatsapp-fab { bottom: 92px; }
-  .cart-fab { bottom: 162px; }
+  .whatsapp-fab { display: none; }
+  .install-prompt {
+    inset-inline: 14px;
+    width: auto;
+    bottom: 86px;
+    transform: none;
+  }
+  .cart-fab { bottom: 154px; }
 }
 
 /* ============================================================ richer hover shadow for cards */
