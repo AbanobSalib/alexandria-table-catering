@@ -2757,6 +2757,14 @@ body::before { z-index: -1; }
   .cart-fab { bottom: 154px; }
 }
 
+/* ============================================================ FIX: closed modals + overlay must not eat clicks */
+.modal { pointer-events: none; }
+.modal.is-open { pointer-events: auto; }
+.modal-card { pointer-events: auto; }
+.overlay[hidden] { display: none !important; pointer-events: none !important; }
+.cart-drawer:not(.is-open) { pointer-events: none; }
+.cart-drawer.is-open { pointer-events: auto; }
+
 /* ============================================================ richer hover shadow for cards */
 .package:hover,
 .preset-card:hover,
