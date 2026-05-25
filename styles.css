@@ -2652,3 +2652,128 @@ html[dir="rtl"] .estimate-output::before { animation: outputShineRtl 3.6s ease-i
   from { transform: translateX(120%); }
   to   { transform: translateX(-110%); }
 }
+
+/* ============================================================ aurora background (additive) */
+.aurora {
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  pointer-events: none;
+  overflow: hidden;
+  filter: blur(80px) saturate(1.1);
+  opacity: 0.55;
+}
+.aurora span {
+  position: absolute;
+  display: block;
+  border-radius: 50%;
+  mix-blend-mode: screen;
+  opacity: 0.85;
+  will-change: transform;
+}
+.aurora .a1 { width: 46vmax; height: 46vmax; top: -18vmax; left: -10vmax; background: radial-gradient(circle, #f3b985, transparent 65%); animation: auroraDriftA 22s ease-in-out infinite alternate; }
+.aurora .a2 { width: 40vmax; height: 40vmax; top: 38vh; right: -14vmax; background: radial-gradient(circle, #c74369, transparent 65%); animation: auroraDriftB 28s ease-in-out infinite alternate; }
+.aurora .a3 { width: 50vmax; height: 50vmax; bottom: -22vmax; left: 18vw; background: radial-gradient(circle, #6c7a3a, transparent 65%); animation: auroraDriftC 34s ease-in-out infinite alternate; }
+@keyframes auroraDriftA { to { transform: translate3d(8vw, 6vh, 0) scale(1.12); } }
+@keyframes auroraDriftB { to { transform: translate3d(-10vw, -4vh, 0) scale(0.94); } }
+@keyframes auroraDriftC { to { transform: translate3d(6vw, -8vh, 0) scale(1.08); } }
+@media (prefers-reduced-motion: reduce) { .aurora { animation: none !important; } .aurora span { animation: none !important; } }
+
+body { position: relative; }
+body::before { z-index: -1; }
+
+/* ============================================================ heading split-letter reveal */
+.split-text { display: inline-block; perspective: 800px; }
+.split-text .ch {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(0.6em) rotateX(35deg);
+  transition: opacity 600ms var(--ease-out), transform 700ms var(--ease-spring);
+  transition-delay: calc(var(--ch-i, 0) * 28ms);
+}
+.split-text.is-revealed .ch { opacity: 1; transform: translateY(0) rotateX(0); }
+.split-text .ws { display: inline-block; width: 0.32em; }
+
+/* ============================================================ sticky mobile quick-book CTA */
+.quick-cta {
+  position: fixed;
+  inset-inline: 14px;
+  bottom: 16px;
+  z-index: 49;
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 12px 16px;
+  border-radius: 999px;
+  color: white;
+  background: linear-gradient(120deg, #14241d 0%, #243d31 55%, #4a6d51 100%);
+  box-shadow: 0 20px 50px rgba(20, 17, 13, 0.32), inset 0 0 0 1px rgba(229, 189, 121, 0.45);
+  font-weight: 800;
+  letter-spacing: 0.01em;
+  text-decoration: none;
+  animation: quickPop 460ms var(--ease-spring) 600ms backwards;
+  border: 0;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 0.96rem;
+}
+.quick-cta:active { transform: scale(0.98); }
+.quick-cta .qc-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--gold), var(--clay));
+  color: white;
+}
+.quick-cta .qc-icon svg { width: 16px; height: 16px; }
+.quick-cta .qc-meta {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.15;
+  font-size: 0.78rem;
+  color: rgba(255, 255, 255, 0.78);
+  font-weight: 600;
+}
+.quick-cta .qc-meta strong { color: white; font-size: 0.96rem; }
+.quick-cta .qc-arrow { color: var(--gold); font-size: 1.2rem; line-height: 1; }
+@keyframes quickPop {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@media (max-width: 720px) {
+  .quick-cta { display: inline-flex; }
+  .whatsapp-fab { bottom: 92px; }
+  .cart-fab { bottom: 162px; }
+}
+
+/* ============================================================ richer hover shadow for cards */
+.package:hover,
+.preset-card:hover,
+.menu-category:hover,
+.review-card:hover,
+.signature-grid article:hover {
+  box-shadow:
+    0 32px 70px rgba(20, 17, 13, 0.18),
+    0 4px 14px rgba(20, 17, 13, 0.08),
+    inset 0 0 0 1px rgba(229, 189, 121, 0.4);
+}
+
+/* ============================================================ page-load cascade for hero */
+.hero-content > * {
+  opacity: 0;
+  transform: translateY(28px);
+  animation: heroCascade 900ms var(--ease-out) forwards;
+}
+.hero-content .eyebrow      { animation-delay: 120ms; }
+.hero-content h1            { animation-delay: 220ms; }
+.hero-content .hero-sub     { animation-delay: 360ms; }
+.hero-content .hero-actions { animation-delay: 480ms; }
+.hero-content .hero-trust   { animation-delay: 600ms; }
+@keyframes heroCascade { to { opacity: 1; transform: translateY(0); } }
+@media (prefers-reduced-motion: reduce) {
+  .hero-content > * { opacity: 1 !important; transform: none !important; animation: none !important; }
+}

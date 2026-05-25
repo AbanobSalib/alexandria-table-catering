@@ -1,15 +1,16 @@
 /* Sofret Mariane service worker
    - precache the shell so the PWA opens offline
    - network-first for HTML so menu/price updates land quickly
-   - cache-first for static assets so the app feels snappy
+   - network-first for JS/CSS/manifest so button fixes land immediately
+   - cache-first for images so the app feels snappy
 */
 
-const VERSION = "sm-v3";
+const VERSION = "sm-v4-0249a86-button-cache-fix";
 const SHELL = [
   "./",
   "index.html",
-  "styles.css",
-  "script.js",
+  "styles.css?v=sm-v4-0249a86-button-cache-fix",
+  "script.js?v=sm-v4-0249a86-button-cache-fix",
   "site.webmanifest",
   "assets/logo.svg",
   "assets/favicon.svg",
@@ -51,7 +52,29 @@ self.addEventListener("fetch", (event) => {
     return;
   }
 
-  /* Cache-first for same-origin static assets */
+  /* Network-first for code/config assets so returning users do not get stale broken buttons */
+  if (
+    sameOrigin &&
+    (url.pathname.endsWith(".js") ||
+      url.pathname.endsWith(".css") ||
+      url.pathname.endsWith(".webmanifest") ||
+      url.pathname.endsWith("/sw.js"))
+  ) {
+    event.respondWith(
+      fetch(req)
+        .then((res) => {
+          if (res && res.status === 200 && res.type === "basic") {
+            const copy = res.clone();
+            caches.open(VERSION).then((c) => c.put(req, copy)).catch(() => {});
+          }
+          return res;
+        })
+        .catch(() => caches.match(req)),
+    );
+    return;
+  }
+
+  /* Cache-first for same-origin images/static media */
   if (sameOrigin) {
     event.respondWith(
       caches.match(req).then((cached) => {

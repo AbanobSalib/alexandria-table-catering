@@ -1331,9 +1331,85 @@ if (hero && window.matchMedia("(hover: hover)").matches) {
   });
 }
 
+/* ---------- aurora background + sticky CTA + letter reveals --- */
+const injectAurora = () => {
+  if (document.querySelector(".aurora")) return;
+  const aurora = document.createElement("div");
+  aurora.className = "aurora";
+  aurora.setAttribute("aria-hidden", "true");
+  aurora.innerHTML = '<span class="a1"></span><span class="a2"></span><span class="a3"></span>';
+  document.body.appendChild(aurora);
+};
+
+const injectQuickCTA = () => {
+  if (document.querySelector(".quick-cta")) return;
+  const a = document.createElement("a");
+  a.className = "quick-cta";
+  a.href = `https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent("Hello Sofret Mariane, I would like a catering quote.")}`;
+  a.target = "_blank";
+  a.rel = "noopener";
+  a.setAttribute("aria-label", "Quick book Sofret Mariane");
+  a.innerHTML = `
+    <span class="qc-icon" aria-hidden="true">
+      <svg viewBox="0 0 24 24"><path fill="currentColor" d="M20.5 3.5A11 11 0 0 0 3.7 17.3L2 22l4.8-1.6A11 11 0 1 0 20.5 3.5Z"/></svg>
+    </span>
+    <span class="qc-meta">
+      <span data-qc-label>Tap to order on WhatsApp</span>
+      <strong data-qc-phone>+20 122 322 6196</strong>
+    </span>
+    <span class="qc-arrow" aria-hidden="true">›</span>`;
+  document.body.appendChild(a);
+
+  /* re-translate on language switch */
+  const sync = () => {
+    const lang = document.documentElement.lang === "ar" ? "ar" : "en";
+    const label = a.querySelector("[data-qc-label]");
+    if (label) label.textContent = lang === "ar" ? "اضغط للحجز عبر واتساب" : "Tap to order on WhatsApp";
+  };
+  new MutationObserver(sync).observe(document.documentElement, { attributes: true, attributeFilter: ["lang"] });
+  sync();
+};
+
+const splitHeadingLetters = () => {
+  const targets = $$("section .section-heading h2, .hero h1");
+  targets.forEach((h) => {
+    if (h.dataset.split === "1") return;
+    h.dataset.split = "1";
+    /* skip if heading contains element children we shouldn't break (e.g. hero rotator) */
+    if (h.querySelector(".hero-rotator")) return;
+    const text = h.textContent.trim();
+    if (!text || text.length > 80) return;
+    h.classList.add("split-text");
+    h.textContent = "";
+    [...text].forEach((c, i) => {
+      const s = document.createElement("span");
+      if (c === " ") { s.className = "ws"; }
+      else {
+        s.className = "ch";
+        s.style.setProperty("--ch-i", String(i));
+        s.textContent = c;
+      }
+      h.appendChild(s);
+    });
+  });
+  /* observe each to add .is-revealed when in view */
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((e) => {
+      if (e.isIntersecting) {
+        e.target.classList.add("is-revealed");
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.2 });
+  $$(".split-text").forEach((el) => io.observe(el));
+};
+
 /* ---------- init -------------------------------------------- */
 applyLang(getLang());
 armReveals();
 refreshCartUI();
 syncPaymentReadiness();
 onScroll();
+injectAurora();
+injectQuickCTA();
+splitHeadingLetters();
