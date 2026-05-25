@@ -43,6 +43,6 @@ See `docs/platform-release-kit.md` Section 4 for full App Store / Play Store ste
 
 Push to `main` — GitHub Pages serves the live site at:
 
-https://abanobsalib.github.io/sofret-mariane/
+https://abanobsalib.github.io/sofret-mariane-catering/
 
 For a custom domain see `docs/platform-release-kit.md` Section 6.

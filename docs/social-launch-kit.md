@@ -21,7 +21,7 @@ When you create each profile, **keep the same handle (`sofretmariane`)** so ever
 - **Category:** Caterer / Food & Beverage
 - **Logo:** `assets/logo.svg` (export to PNG 1024×1024 for upload)
 - **Cover image:** `assets/social-cover.jpg` (1640×856)
-- **Website:** https://abanobsalib.github.io/sofret-mariane/
+- **Website:** https://abanobsalib.github.io/sofret-mariane-catering/
 - **WhatsApp:** https://wa.me/201223226196
 - **Service area:** Alexandria, North Coast, Cairo on request
 - **Hours:** Sat–Thu, 9:00–21:00
@@ -75,7 +75,7 @@ Order on WhatsApp 👇
 اطلب على واتساب 👇
 ```
 
-**Link in bio:** https://abanobsalib.github.io/sofret-mariane/ (or your Linktree / Lnk.bio pointing back to the site sections).
+**Link in bio:** https://abanobsalib.github.io/sofret-mariane-catering/ (or your Linktree / Lnk.bio pointing back to the site sections).
 
 **Story highlights to create:**
 - Menu · Packages · Weddings · Office · Reviews · Contact

@@ -2,9 +2,9 @@
   "name": "Sofret Mariane — Egyptian Catering",
   "short_name": "Sofret Mariane",
   "description": "Certified Egyptian catering in Alexandria. Order from a family lunch for 10 to a wedding for 500.",
-  "start_url": "/sofret-mariane/?utm_source=pwa",
-  "scope": "/sofret-mariane/",
-  "id": "/sofret-mariane/",
+  "start_url": "/sofret-mariane-catering/?utm_source=pwa",
+  "scope": "/sofret-mariane-catering/",
+  "id": "/sofret-mariane-catering/",
   "display": "standalone",
   "display_override": ["standalone", "minimal-ui"],
   "orientation": "portrait",
@@ -31,21 +31,21 @@
       "name": "Place an order",
       "short_name": "Order",
       "description": "Open the menu and start a new catering order",
-      "url": "/sofret-mariane/?action=order",
+      "url": "/sofret-mariane-catering/?action=order",
       "icons": [{ "src": "assets/favicon.svg", "sizes": "64x64", "type": "image/svg+xml" }]
     },
     {
       "name": "Chat on WhatsApp",
       "short_name": "WhatsApp",
       "description": "Message the chef on WhatsApp",
-      "url": "/sofret-mariane/?action=whatsapp",
+      "url": "/sofret-mariane-catering/?action=whatsapp",
       "icons": [{ "src": "assets/favicon.svg", "sizes": "64x64", "type": "image/svg+xml" }]
     },
     {
       "name": "Build an estimate",
       "short_name": "Estimate",
       "description": "Get a quick catering quote",
-      "url": "/sofret-mariane/?action=estimate#estimate",
+      "url": "/sofret-mariane-catering/?action=estimate#estimate",
       "icons": [{ "src": "assets/favicon.svg", "sizes": "64x64", "type": "image/svg+xml" }]
     }
   ],

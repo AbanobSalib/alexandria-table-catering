@@ -5,12 +5,16 @@
    - cache-first for images so the app feels snappy
 */
 
-const VERSION = "sm-v5-form-cta-mobile-fix";
+const VERSION = "sm-v6-platform-pages-photos";
 const SHELL = [
   "./",
   "index.html",
-  "styles.css?v=sm-v5-form-cta-mobile-fix",
-  "script.js?v=sm-v5-form-cta-mobile-fix",
+  "platforms.html",
+  "privacy.html",
+  "terms.html",
+  "support.html",
+  "styles.css?v=sm-v6-platform-pages-photos",
+  "script.js?v=sm-v6-platform-pages-photos",
   "site.webmanifest",
   "assets/logo.svg",
   "assets/favicon.svg",

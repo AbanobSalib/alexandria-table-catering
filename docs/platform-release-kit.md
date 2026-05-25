@@ -12,7 +12,7 @@ Anything tagged **[YOU]** requires you to do it (signups, payments, verification
 - The same files power the **PWA** (installable web app) and the **Capacitor wrapper** that becomes the iOS / Android native app.
 - The repo lives at `github.com/AbanobSalib/sofret-mariane-catering` and pushes to GitHub Pages at:
 
-  https://abanobsalib.github.io/sofret-mariane/
+  https://abanobsalib.github.io/sofret-mariane-catering/
 
 > **Important:** every URL in `index.html`, `script.js`, `site.webmanifest`, and `sitemap.xml` uses that GitHub Pages URL. If you move to a custom domain (Section 6), do a search-replace across the repo before deploying.
 

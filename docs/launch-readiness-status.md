@@ -5,7 +5,7 @@ Last checked: 2026-05-24
 ## Live website
 
 - Status: ready for deploy
-- URL: https://abanobsalib.github.io/sofret-mariane/
+- URL: https://abanobsalib.github.io/sofret-mariane-catering/
 - WhatsApp / phone: +20 122 322 6196
 - WhatsApp link format: https://wa.me/201223226196
 - Location: Cleopatra, Alexandria

@@ -1286,7 +1286,7 @@ footer {
   color: white;
   background:
     linear-gradient(135deg, rgba(22, 21, 18, 0.86), rgba(40, 56, 47, 0.94)),
-    url("https://images.unsplash.com/photo-1495521821757-a1efb6729352?auto=format&fit=crop&w=1600&q=82") center / cover;
+    url("https://images.unsplash.com/photo-1775181180462-18b20da9340e?auto=format&fit=crop&w=1600&q=82") center / cover;
 }
 .estimate-copy p { color: rgba(255, 255, 255, 0.78); }
 .estimate-points {
@@ -1636,6 +1636,97 @@ textarea { resize: vertical; }
 }
 .social-tile:hover::after { opacity: 1; }
 
+/* ============================================================ platform/legal pages */
+.simple-page {
+  min-height: 100vh;
+  color: var(--ink);
+  background: var(--grad-paper);
+}
+.simple-main {
+  width: min(980px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 72px 0 96px;
+}
+.simple-nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 22px clamp(18px, 6vw, 80px);
+  border-bottom: 1px solid var(--line);
+  background: rgba(255, 248, 235, 0.88);
+  backdrop-filter: blur(18px);
+}
+.simple-nav a { color: var(--ink); font-weight: 800; text-decoration: none; }
+.simple-nav .brand-mini { display: inline-flex; align-items: center; gap: 10px; }
+.simple-nav img { width: 42px; height: 42px; border-radius: 12px; }
+.simple-title {
+  max-width: 760px;
+  margin-bottom: 36px;
+}
+.simple-title h1 {
+  margin: 0 0 12px;
+  font-family: var(--serif);
+  font-size: clamp(2.6rem, 7vw, 5.2rem);
+  line-height: 0.95;
+}
+.simple-title p { color: var(--muted); font-size: 1.05rem; }
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+.info-card {
+  padding: 24px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  background: rgba(255, 255, 255, 0.72);
+  box-shadow: var(--shadow-sm);
+}
+.info-card h2,
+.info-card h3 {
+  margin-top: 0;
+  color: var(--olive-deep);
+  font-family: var(--serif);
+}
+.info-card p,
+.info-card li { color: var(--muted); }
+.info-card a { color: var(--clay-deep); font-weight: 800; }
+.info-card.full { grid-column: 1 / -1; }
+.status-pill {
+  display: inline-flex;
+  width: fit-content;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+  padding: 7px 10px;
+  border-radius: 999px;
+  background: rgba(229, 189, 121, 0.22);
+  color: var(--olive-deep);
+  font-weight: 900;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+}
+.platform-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 16px;
+}
+.platform-actions a {
+  display: inline-flex;
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: var(--forest);
+  color: white;
+  text-decoration: none;
+}
+@media (max-width: 720px) {
+  .info-grid { grid-template-columns: 1fr; }
+  .simple-main { padding-top: 46px; }
+}
+
 /* ============================================================ faq */
 .faq-section {
   padding: 100px clamp(18px, 6vw, 80px);
@@ -1914,21 +2005,29 @@ html[dir="rtl"] .footer-grid a:hover { transform: translateX(-4px); }
   nav {
     position: fixed;
     inset: 0;
-    z-index: 9;
+    z-index: 60;
     flex-direction: column;
-    justify-content: center;
-    gap: 18px;
-    padding: 80px 24px 24px;
+    justify-content: flex-start;
+    align-items: stretch;
+    gap: 6px;
+    padding: calc(env(safe-area-inset-top, 0px) + 110px) 24px calc(env(safe-area-inset-bottom, 0px) + 32px);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
     background: rgba(251, 245, 234, 0.98);
     backdrop-filter: blur(20px);
     font-size: 1.4rem;
     font-weight: 700;
     opacity: 0;
-    visibility: hidden;
     pointer-events: none;
+    visibility: hidden;
     transform: translateY(-100vh);
     transition: transform 320ms var(--ease-out), opacity 220ms var(--ease-out), visibility 0ms linear 320ms;
   }
+  nav a {
+    padding: 12px 6px;
+    border-bottom: 1px solid rgba(20, 17, 13, 0.08);
+  }
+  nav a::after { display: none; }
   nav.is-open {
     opacity: 1;
     visibility: visible;
