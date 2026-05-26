@@ -431,8 +431,20 @@ nav a.is-active { color: var(--clay-deep); }
   inset: 0;
   z-index: -1;
   background:
-    linear-gradient(90deg, rgba(8, 12, 9, 0.86), rgba(8, 12, 9, 0.42) 58%, rgba(8, 12, 9, 0.1)),
-    linear-gradient(0deg, rgba(8, 12, 9, 0.62), transparent 50%);
+    linear-gradient(90deg, rgba(8, 12, 9, 0.92), rgba(8, 12, 9, 0.7) 50%, rgba(8, 12, 9, 0.5) 78%, rgba(8, 12, 9, 0.35)),
+    linear-gradient(0deg, rgba(8, 12, 9, 0.82), rgba(8, 12, 9, 0.35) 55%, rgba(8, 12, 9, 0.55));
+}
+.hero-content h1,
+.hero-content .hero-sub,
+.hero-content .eyebrow,
+.hero-content .hero-trust strong {
+  text-shadow: 0 2px 18px rgba(0, 0, 0, 0.55);
+}
+@media (max-width: 720px) {
+  .hero::before {
+    background:
+      linear-gradient(180deg, rgba(8, 12, 9, 0.78), rgba(8, 12, 9, 0.55) 45%, rgba(8, 12, 9, 0.88));
+  }
 }
 .hero::after {
   content: "";
@@ -3164,8 +3176,30 @@ footer::before {
 }
 .hero::before {
   background:
-    linear-gradient(90deg, rgba(255, 250, 241, 0.92), rgba(255, 250, 241, 0.74), rgba(255, 250, 241, 0.24)),
+    linear-gradient(90deg, rgba(255, 250, 241, 0.96), rgba(255, 250, 241, 0.82) 55%, rgba(255, 250, 241, 0.52) 80%, rgba(255, 250, 241, 0.34)),
     radial-gradient(circle at 68% 42%, rgba(20, 36, 29, 0.16), transparent 42%);
+}
+/* Hero text reads against the cream overlay — force dark on light */
+.hero { color: var(--ink, #14110d) !important; }
+.hero h1 { color: var(--ink, #14110d); text-shadow: none; }
+.hero .hero-sub { color: rgba(20, 17, 13, 0.78); text-shadow: none; }
+.hero .eyebrow { color: var(--saffron-deep, #b97719); text-shadow: none; }
+.hero .hero-trust strong { color: var(--olive-deep, #2b3b2a); text-shadow: none; }
+.hero .hero-trust span { color: rgba(20, 17, 13, 0.6); }
+.hero-trust { border-top-color: rgba(20, 17, 13, 0.12); }
+.hero .button.ghost { color: var(--ink); border-color: rgba(20, 17, 13, 0.3); background: rgba(255, 255, 255, 0.5); }
+.hero .hero-accent {
+  background: linear-gradient(110deg, var(--clay), var(--saffron-deep) 40%, var(--henna) 90%);
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+@media (max-width: 720px) {
+  .hero::before {
+    background:
+      linear-gradient(180deg, rgba(255, 250, 241, 0.95), rgba(255, 250, 241, 0.78) 45%, rgba(255, 250, 241, 0.55) 75%, rgba(255, 250, 241, 0.9));
+  }
 }
 .hero h1,
 .section-title h2,
