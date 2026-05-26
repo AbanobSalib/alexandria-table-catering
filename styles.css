@@ -2207,7 +2207,8 @@ html[dir="rtl"] .cart-drawer {
   transform: translateX(-100%);
   box-shadow: 30px 0 80px rgba(20, 17, 13, 0.22);
 }
-.cart-drawer.is-open { transform: translateX(0); }
+.cart-drawer.is-open,
+html[dir="rtl"] .cart-drawer.is-open { transform: translateX(0); }
 
 .cart-head {
   display: flex;
