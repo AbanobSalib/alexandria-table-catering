@@ -3273,3 +3273,115 @@ html[dir="rtl"] .checkout-summary strong {
     padding: 34px 20px 22px;
   }
 }
+
+/* ============================================================ REVIEW CARDS — refined */
+.reviews-section {
+  background:
+    radial-gradient(circle at 8% 18%, rgba(199, 67, 105, 0.08), transparent 22rem),
+    radial-gradient(circle at 92% 82%, rgba(229, 189, 121, 0.12), transparent 22rem),
+    #fbf1e4;
+}
+.review-grid { gap: 22px; }
+.review-card {
+  padding: 36px 28px 28px;
+  border: 1px solid rgba(20, 17, 13, 0.08);
+  border-radius: 22px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.95), rgba(255, 248, 235, 0.85));
+  backdrop-filter: blur(6px);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.85) inset,
+    0 18px 40px -22px rgba(20, 17, 13, 0.18);
+  overflow: visible;
+}
+.review-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(229, 189, 121, 0.65);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.95) inset,
+    0 26px 60px -22px rgba(20, 17, 13, 0.28);
+}
+/* big elegant quote glyph at top-left, properly positioned */
+.review-card::before {
+  content: "\201C";
+  position: absolute;
+  inset-inline-start: 22px;
+  top: 12px;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 5.2rem;
+  line-height: 1;
+  color: var(--gold);
+  opacity: 0.5;
+  pointer-events: none;
+}
+/* stars sit cleanly in their own row at the bottom-left */
+.review-stars {
+  position: static !important;
+  display: inline-flex;
+  margin-top: 18px;
+  padding: 4px 12px;
+  background: linear-gradient(135deg, rgba(229, 189, 121, 0.18), rgba(210, 96, 61, 0.12));
+  border-radius: 999px;
+  color: var(--saffron-deep, #b97719);
+  font-size: 0.95rem;
+  letter-spacing: 3px;
+}
+/* blockquote: more breathing room, lighter, italic */
+.review-card blockquote {
+  margin: 24px 0 22px;
+  color: var(--ink-soft);
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  letter-spacing: 0.005em;
+}
+/* author block: avatar initial + name + meta */
+.review-card figcaption {
+  display: grid;
+  grid-template-columns: 44px 1fr;
+  gap: 12px;
+  align-items: center;
+  padding-top: 18px;
+  border-top: 1px solid rgba(20, 17, 13, 0.06);
+}
+.review-card figcaption::before {
+  content: attr(data-initial);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--olive-deep), #3e5840);
+  color: var(--gold);
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: 1.2rem;
+  letter-spacing: 0;
+}
+.review-card figcaption strong {
+  display: block;
+  color: var(--ink);
+  font-size: 1rem;
+  margin-bottom: 2px;
+}
+.review-card figcaption span {
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+/* RTL: keep quote glyph on the right side as expected */
+html[dir="rtl"] .review-card::before { content: "\201D"; inset-inline-start: 22px; }
+html[dir="rtl"] .review-card blockquote {
+  font-family: "Amiri", serif;
+  font-style: normal;
+}
+
+/* ============================================================ LOGO interactive pulse on header */
+.brand:hover img { filter: drop-shadow(0 0 14px rgba(240, 201, 122, 0.6)); }
+
+/* fix tilt-inner edge clipping for review cards (broken when content jumps in z) */
+.review-card .tilt-inner { transform: none !important; }
+.review-card:hover .tilt-inner { transform: none !important; }
+

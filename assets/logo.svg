@@ -1,73 +1,114 @@
 <svg width="320" height="320" viewBox="0 0 320 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="logoTitle logoDesc">
   <title id="logoTitle">Sofret Mariane</title>
-  <desc id="logoDesc">A gold-and-forest medallion with a serif M monogram, a serving dome, and crossed wheat sprigs.</desc>
+  <desc id="logoDesc">Animated serif monogram on a gold-rimmed emerald medallion with rotating arabesque ring.</desc>
 
   <defs>
-    <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%"  stop-color="#1c3128"/>
-      <stop offset="55%" stop-color="#14241d"/>
-      <stop offset="100%" stop-color="#0d1812"/>
-    </linearGradient>
-    <linearGradient id="goldGrad" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%"   stop-color="#f1d18a"/>
-      <stop offset="50%"  stop-color="#e5bd79"/>
-      <stop offset="100%" stop-color="#b88c3f"/>
-    </linearGradient>
-    <linearGradient id="goldHighlight" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%"   stop-color="#fff2c8"/>
-      <stop offset="100%" stop-color="#e5bd79"/>
-    </linearGradient>
-    <radialGradient id="innerGlow" cx="0.5" cy="0.32" r="0.7">
-      <stop offset="0%"   stop-color="#2b4538" stop-opacity="0.9"/>
-      <stop offset="100%" stop-color="#14241d" stop-opacity="0"/>
+    <!-- emerald gradient base -->
+    <radialGradient id="emerald" cx="50%" cy="40%" r="65%">
+      <stop offset="0%"  stop-color="#234b3a"/>
+      <stop offset="55%" stop-color="#15301f"/>
+      <stop offset="100%" stop-color="#0a1c12"/>
     </radialGradient>
+    <!-- gold gradient -->
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%"   stop-color="#fff0c6"/>
+      <stop offset="40%"  stop-color="#f0c97a"/>
+      <stop offset="70%"  stop-color="#d5a04a"/>
+      <stop offset="100%" stop-color="#a17326"/>
+    </linearGradient>
+    <linearGradient id="goldShimmer" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#fff2c8" stop-opacity="0.95"/>
+      <stop offset="50%"  stop-color="#f0c97a"/>
+      <stop offset="100%" stop-color="#a17326"/>
+    </linearGradient>
+    <!-- soft glow around emblem -->
+    <radialGradient id="innerGlow" cx="50%" cy="30%" r="55%">
+      <stop offset="0%"  stop-color="#4a8769" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#0a1c12" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- arabesque flourish (used as inside ring decoration) -->
+    <symbol id="leaflet" viewBox="-10 -4 20 8">
+      <path d="M-9 0 q5 -6 9 0 q4 6 9 0" fill="none" stroke="url(#gold)" stroke-width="1.1" stroke-linecap="round"/>
+    </symbol>
+
+    <!-- subtle vignette mask -->
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="1.2"/>
+    </filter>
+
+    <style>
+      .ring         { transform-origin: 160px 160px; animation: sm-spin 22s linear infinite; }
+      .ring-rev     { transform-origin: 160px 160px; animation: sm-spin-rev 36s linear infinite; }
+      .shimmer-fill { animation: sm-shimmer 6s ease-in-out infinite; }
+      .pulse-dot    { transform-origin: 160px 100px; animation: sm-pulse 3.2s ease-in-out infinite; }
+      .star         { transform-origin: 160px 160px; animation: sm-twinkle 4s ease-in-out infinite; }
+
+      @keyframes sm-spin     { to   { transform: rotate(360deg); } }
+      @keyframes sm-spin-rev { to   { transform: rotate(-360deg); } }
+      @keyframes sm-shimmer {
+        0%, 100% { opacity: 1; }
+        50%      { opacity: 0.78; }
+      }
+      @keyframes sm-pulse {
+        0%, 100% { transform: scale(1); opacity: 1; }
+        50%      { transform: scale(1.18); opacity: 0.72; }
+      }
+      @keyframes sm-twinkle {
+        0%, 100% { opacity: 0.6; }
+        50%      { opacity: 1; }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .ring, .ring-rev, .shimmer-fill, .pulse-dot, .star { animation: none !important; }
+      }
+    </style>
   </defs>
 
-  <!-- Rounded card background -->
-  <rect width="320" height="320" rx="76" fill="#fff8eb"/>
-  <rect x="6" y="6" width="308" height="308" rx="72" fill="none" stroke="#e5bd79" stroke-opacity="0.32" stroke-width="1.2"/>
+  <!-- rounded card background (cream) -->
+  <rect width="320" height="320" rx="80" fill="#fff8eb"/>
+  <rect x="6" y="6" width="308" height="308" rx="74" fill="none" stroke="#d5a04a" stroke-opacity="0.18"/>
 
-  <!-- Outer medallion -->
-  <circle cx="160" cy="160" r="124" fill="url(#bgGrad)"/>
-  <circle cx="160" cy="160" r="124" fill="url(#innerGlow)"/>
+  <!-- outer emerald medallion -->
+  <circle cx="160" cy="160" r="128" fill="url(#emerald)"/>
+  <circle cx="160" cy="160" r="128" fill="url(#innerGlow)" />
 
-  <!-- Outer thin ring -->
-  <circle cx="160" cy="160" r="118" fill="none" stroke="url(#goldGrad)" stroke-width="1.5" stroke-opacity="0.75"/>
-  <!-- Inner braided ring with tick marks -->
-  <g stroke="url(#goldGrad)" stroke-width="2.2" fill="none">
-    <circle cx="160" cy="160" r="108"/>
+  <!-- decorative animated outer ring (counter-rotating) -->
+  <g class="ring-rev">
+    <circle cx="160" cy="160" r="118" fill="none" stroke="url(#gold)" stroke-width="0.8" stroke-dasharray="2 4" opacity="0.65"/>
   </g>
-  <g fill="url(#goldGrad)">
-    <!-- 4 cardinal diamonds -->
+
+  <!-- inner double rings -->
+  <circle cx="160" cy="160" r="110" fill="none" stroke="url(#gold)" stroke-width="1.6"/>
+  <circle cx="160" cy="160" r="105" fill="none" stroke="url(#gold)" stroke-width="0.6" opacity="0.55"/>
+
+  <!-- rotating arabesque leaflet ring -->
+  <g class="ring">
     <g>
-      <polygon points="160,42 165,52 160,62 155,52" transform="translate(0,0)"/>
-      <polygon points="160,42 165,52 160,62 155,52" transform="rotate(90 160 160)"/>
-      <polygon points="160,42 165,52 160,62 155,52" transform="rotate(180 160 160)"/>
-      <polygon points="160,42 165,52 160,62 155,52" transform="rotate(270 160 160)"/>
-    </g>
-    <!-- Tiny pearl dots around the ring -->
-    <g opacity="0.85">
-      <circle r="2" cx="160" cy="48"/>
-      <circle r="2" cx="160" cy="272"/>
-      <circle r="2" cx="48" cy="160"/>
-      <circle r="2" cx="272" cy="160"/>
-      <circle r="1.6" cx="237" cy="83"/>
-      <circle r="1.6" cx="83" cy="83"/>
-      <circle r="1.6" cx="237" cy="237"/>
-      <circle r="1.6" cx="83" cy="237"/>
+      <!-- 8 leaflets arranged at evenly spaced angles -->
+      <g transform="translate(160 50)"><use href="#leaflet" /></g>
+      <g transform="rotate(45  160 160) translate(160 50)"><use href="#leaflet" /></g>
+      <g transform="rotate(90  160 160) translate(160 50)"><use href="#leaflet" /></g>
+      <g transform="rotate(135 160 160) translate(160 50)"><use href="#leaflet" /></g>
+      <g transform="rotate(180 160 160) translate(160 50)"><use href="#leaflet" /></g>
+      <g transform="rotate(225 160 160) translate(160 50)"><use href="#leaflet" /></g>
+      <g transform="rotate(270 160 160) translate(160 50)"><use href="#leaflet" /></g>
+      <g transform="rotate(315 160 160) translate(160 50)"><use href="#leaflet" /></g>
     </g>
   </g>
 
-  <!-- Serving dome accent above the M -->
-  <g transform="translate(160 100)">
-    <path d="M-28 8 Q-28 -16 0 -16 Q28 -16 28 8 Z" fill="url(#goldHighlight)"/>
-    <rect x="-32" y="8" width="64" height="4" rx="2" fill="url(#goldGrad)"/>
-    <circle cx="0" cy="-18" r="3" fill="url(#goldGrad)"/>
+  <!-- subtle 8-point star halo behind monogram -->
+  <g class="star" opacity="0.5">
+    <path d="M160 90 L168 152 L230 160 L168 168 L160 230 L152 168 L90 160 L152 152 Z"
+          fill="url(#gold)" filter="url(#softShadow)" opacity="0.25"/>
   </g>
 
-  <!-- Serif "M" monogram -->
-  <g fill="url(#goldHighlight)">
-    <path d="
+  <!-- small pulsing dot above the M (like a star) -->
+  <circle class="pulse-dot" cx="160" cy="100" r="2.4" fill="#fff2c8"/>
+
+  <!-- elegant serif "M" monogram, drawn as paths for crisp rendering -->
+  <g class="shimmer-fill">
+    <path fill="url(#goldShimmer)" d="
       M104 220
       L104 130
       L98 130 L98 124
@@ -82,31 +123,13 @@
       L122 142
       L122 220
       L130 220
-      L130 226 L96 226 L96 220 Z
-    "/>
+      L130 226 L96 226 L96 220 Z"/>
+    <!-- subtle "S" prefix integrated under the M as flourish -->
+    <path d="M138 236 q22 -10 44 0" fill="none" stroke="url(#goldShimmer)" stroke-width="1.6" stroke-linecap="round"/>
+    <circle cx="138" cy="236" r="1.7" fill="url(#goldShimmer)"/>
+    <circle cx="182" cy="236" r="1.7" fill="url(#goldShimmer)"/>
   </g>
 
-  <!-- Crossed wheat sprigs at bottom -->
-  <g stroke="url(#goldGrad)" stroke-width="1.6" stroke-linecap="round" fill="url(#goldGrad)">
-    <!-- left sprig -->
-    <g transform="translate(112 246) rotate(-22)">
-      <line x1="0" y1="0" x2="0" y2="-28"/>
-      <ellipse cx="-4" cy="-6"  rx="2.2" ry="4.6" transform="rotate(-22 -4 -6)"/>
-      <ellipse cx="4"  cy="-10" rx="2.2" ry="4.6" transform="rotate(22 4 -10)"/>
-      <ellipse cx="-4" cy="-14" rx="2.2" ry="4.6" transform="rotate(-22 -4 -14)"/>
-      <ellipse cx="4"  cy="-18" rx="2.2" ry="4.6" transform="rotate(22 4 -18)"/>
-      <ellipse cx="-4" cy="-22" rx="2.2" ry="4.6" transform="rotate(-22 -4 -22)"/>
-    </g>
-    <!-- right sprig -->
-    <g transform="translate(208 246) rotate(22)">
-      <line x1="0" y1="0" x2="0" y2="-28"/>
-      <ellipse cx="-4" cy="-6"  rx="2.2" ry="4.6" transform="rotate(-22 -4 -6)"/>
-      <ellipse cx="4"  cy="-10" rx="2.2" ry="4.6" transform="rotate(22 4 -10)"/>
-      <ellipse cx="-4" cy="-14" rx="2.2" ry="4.6" transform="rotate(-22 -4 -14)"/>
-      <ellipse cx="4"  cy="-18" rx="2.2" ry="4.6" transform="rotate(22 4 -18)"/>
-      <ellipse cx="-4" cy="-22" rx="2.2" ry="4.6" transform="rotate(-22 -4 -22)"/>
-    </g>
-    <!-- center tying knot -->
-    <circle cx="160" cy="246" r="3" fill="url(#goldHighlight)" stroke="none"/>
-  </g>
+  <!-- subtle base shadow under the monogram -->
+  <ellipse cx="160" cy="248" rx="46" ry="3" fill="#000" opacity="0.16" filter="url(#softShadow)"/>
 </svg>
