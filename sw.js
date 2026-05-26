@@ -5,7 +5,7 @@
    - cache-first for images so the app feels snappy
 */
 
-const VERSION = "sm-v8-rtl-drawer";
+const VERSION = "sm-v9-arabic-design";
 const SHELL = [
   "./",
   "index.html",
@@ -13,8 +13,8 @@ const SHELL = [
   "privacy.html",
   "terms.html",
   "support.html",
-  "styles.css?v=sm-v8-rtl-drawer",
-  "script.js?v=sm-v8-rtl-drawer",
+  "styles.css?v=sm-v9-arabic-design",
+  "script.js?v=sm-v9-arabic-design",
   "site.webmanifest",
   "assets/logo.svg",
   "assets/favicon.svg",

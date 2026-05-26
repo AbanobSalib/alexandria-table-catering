@@ -56,7 +56,7 @@ const I18N = {
     "brand.tag": "Certified Egyptian Catering",
     "nav.chef": "Chef", "nav.packages": "Packages", "nav.menu": "Menu", "nav.gallery": "Gallery",
     "nav.estimate": "Quote", "nav.reviews": "Reviews", "nav.location": "Location", "nav.book": "Book",
-    "nav.faq": "FAQ", "nav.orderNow": "Order Now",
+    "nav.faq": "FAQ", "nav.orderNow": "Order Now", "nav.openMenu": "Open menu",
     "hero.eyebrow": "Alexandria · Since 2018",
     "hero.title.line1": "Egyptian catering",
     "hero.title.line2": "for every table.",
@@ -264,6 +264,8 @@ const I18N = {
     "contact.field.date": "Event date", "contact.field.guests": "Guests",
     "contact.field.event": "Event type", "contact.field.area": "Area in Alexandria",
     "contact.field.message": "What should Mariane cook?",
+    "contact.placeholder.area": "Cleopatra, Smouha, Montazah...",
+    "contact.placeholder.message": "Example: family lunch for 18 people - kofta, mahshi, rice, dessert, delivery to Smouha.",
     "contact.event.family": "Family gathering", "contact.event.office": "Office / corporate",
     "contact.event.birthday": "Birthday", "contact.event.engagement": "Engagement / Henna",
     "contact.event.wedding": "Wedding", "contact.event.conference": "Conference / Launch",
@@ -272,12 +274,15 @@ const I18N = {
     "contact.note": "Mariane usually replies within 1–2 hours, 9am–9pm Egypt time.",
     "cart.title": "Your order",
     "cart.empty": "Your cart is empty. Browse the menu and tap + to add trays.",
+    "cart.browse": "Browse the menu",
     "cart.estimated": "Estimated total",
     "cart.note": "Final pricing is confirmed by Mariane before deposit.",
     "cart.checkout": "Continue to checkout",
     "checkout.title": "Place your catering order",
     "checkout.sub": "Mariane confirms every order personally. Your details are sent securely over WhatsApp + your chosen payment method.",
     "checkout.notes": "Notes & preferences (allergies, spice, timing)",
+    "checkout.placeholder.area": "Cleopatra, Smouha...",
+    "checkout.placeholder.notes": "Anything Mariane should know",
     "checkout.payment": "Payment method",
     "checkout.totalLabel": "Estimated total",
     "checkout.place": "Place order",
@@ -301,8 +306,8 @@ const I18N = {
     "add.btn": "Add",
   },
   ar: {
-    "meta.title": "سفرة مريان | أفضل تموين في الإسكندرية، مصر",
-    "meta.description": "سفرة مريان لتموين الأكل المصري المعتمد في الإسكندرية — من غداء عائلي لـ 10 أشخاص حتى فرح أو مؤتمر لـ 500+. تسعير سريع عبر واتساب.",
+    "meta.title": "سفرة مريان | تموين مصري راقي في الإسكندرية",
+    "meta.description": "سفرة مريان لتموين الأكل المصري المعتمد في الإسكندرية — من عزومة عائلية لـ ١٠ أشخاص لحد فرح أو مؤتمر لـ ٥٠٠+ ضيف. عرض السعر بيوصلك بسرعة على واتساب.",
     "a11y.skip": "تخطي إلى المحتوى",
     "topbar.area": "الإسكندرية · الساحل الشمالي · القاهرة عند الطلب",
     "topbar.whatsapp": "واتساب",
@@ -310,39 +315,39 @@ const I18N = {
     "brand.name": "سفرة مريان",
     "brand.tag": "تموين مصري معتمد",
     "nav.chef": "الشيف", "nav.packages": "الباقات", "nav.menu": "المنيو", "nav.gallery": "الصور",
-    "nav.estimate": "تسعير", "nav.reviews": "التقييمات", "nav.location": "العنوان", "nav.book": "احجز",
-    "nav.faq": "أسئلة", "nav.orderNow": "اطلب الآن",
-    "hero.eyebrow": "الإسكندرية · منذ 2018",
+    "nav.estimate": "عرض سعر", "nav.reviews": "التقييمات", "nav.location": "العنوان", "nav.book": "احجز",
+    "nav.faq": "أسئلة", "nav.orderNow": "اطلب الآن", "nav.openMenu": "افتح القائمة",
+    "hero.eyebrow": "الإسكندرية · من ٢٠١٨",
     "hero.title.line1": "تموين مصري",
     "hero.title.line2": "لكل سفرة.",
     "hero.title.for": "لكل",
     "hero.rotate.table": "سفرة.",
-    "hero.sub": "من غدا العيلة لـ 10 أشخاص لحد فرح ٥٠٠ ضيف. أكل بيتي معتمد، دافي، وفي ميعاده — والسعر يجيلك في دقايق على واتساب.",
+    "hero.sub": "من غداء عيلة لـ ١٠ أشخاص لحد فرح لـ ٥٠٠ ضيف. أكل مصري دافي، معتمد، وفي ميعاده — وعرض السعر يوصلك في دقايق على واتساب.",
     "hero.cta.estimate": "احصل على عرض سعر",
     "hero.cta.menu": "شاهد المنيو",
     "hero.trust.events": "حفلة تم تموينها",
     "hero.trust.rating": "متوسط تقييم العملاء",
     "hero.trust.lead": "مدة التحضير المعتادة",
     "tracks.small.title": "بيت وعزومات صغيرة",
-    "tracks.small.body": "من 10 إلى 40 ضيف. غداء العيلة، أعياد ميلاد، بوفيه مكتب، عمادة.",
+    "tracks.small.body": "من ١٠ إلى ٤٠ ضيف. غداء العيلة، أعياد ميلاد، بوفيه مكتب، معمودية.",
     "tracks.small.cta": "شاهد الباقات الصغيرة ←",
     "tracks.big.title": "مناسبات كبيرة",
-    "tracks.big.body": "من 50 إلى 500+ ضيف. أفراح، خطوبة، شركات، مؤتمرات.",
+    "tracks.big.body": "من ٥٠ إلى ٥٠٠+ ضيف. أفراح، خطوبة، شركات، مؤتمرات.",
     "tracks.big.cta": "شاهد باقات الحفلات الكبيرة ←",
     "presets.kicker": "تخطيط سريع",
     "presets.heading": "اختار المناسبة الأقرب لطلبك.",
     "presets.body": "بنجهز حاسبة السعر بعدد ضيوف وخدمة واقعية عشان تبعت لمريان أسرع.",
     "presets.family.tag": "سفرة بيت",
-    "presets.family.title": "غداء عائلي لـ 24",
+    "presets.family.title": "غداء عائلي لـ ٢٤",
     "presets.family.body": "صواني رئيسية، محشي، سلطات، حلويات صغيرة.",
     "presets.office.tag": "شركات",
-    "presets.office.title": "غداء مكتب لـ 36",
-    "presets.office.body": "صواني بليبل، أدوات محكمة، خيار نباتي.",
+    "presets.office.title": "غداء مكتب لـ ٣٦",
+    "presets.office.body": "صواني عليها اسم كل صنف، تغليف محكم، وخيار نباتي.",
     "presets.wedding.tag": "سيجنتشر",
-    "presets.wedding.title": "بوفيه فرح لـ 180",
+    "presets.wedding.title": "بوفيه فرح لـ ١٨٠",
     "presets.wedding.body": "بوفيه ساخن، طاولة حلويات، ويترز وتجهيز.",
     "presets.sea.tag": "إسكندرية",
-    "presets.sea.title": "سفرة سي فود لـ 18",
+    "presets.sea.title": "سفرة سمك لـ ١٨",
     "presets.sea.body": "صيادية، سمك مشوي، مزة، أطباق ساحلية.",
     "chef.tag": "الشيف مريان أنيس",
     "chef.kicker": "الشيف",
@@ -354,88 +359,88 @@ const I18N = {
     "chef.cred2.title": "مطبخ مرخص",
     "chef.cred2.body": "تحضير آمن، حصص محسوبة، خطة للحساسية، وملاحظات تسخين واضحة.",
     "chef.cred3.title": "خدمة جاهزة للمناسبات",
-    "chef.cred3.body": "ليبل على الصواني، خطة توصيل، أدوات تقديم، وتأكيد عربون.",
+    "chef.cred3.body": "أسماء واضحة على الصواني، خطة توصيل، أدوات تقديم، وتأكيد عربون.",
     "why.kicker": "ليه الضيوف بيفتكروها",
     "why.heading": "مش بس صواني. سفرة كاملة.",
     "why.1.title": "ظبط المنيو", "why.1.body": "مريان بتفصّل المنيو على المناسبة، الميزانية، عدد الضيوف، وميعاد التقديم.",
     "why.2.title": "كميات محسوبة", "why.2.body": "الصواني محسوبة عشان السفرة تبان عامرة، من غير هدر ولا لخبطة آخر لحظة.",
-    "why.3.title": "تفاصيل أنيقة", "why.3.body": "ليبل على كل صينية، ملاحظات تسخين، أدوات تقديم، وإضافات حلويات تخلي الاستضافة سهلة.",
-    "why.4.title": "روح إسكندرية", "why.4.body": "سي فود، مشاوي، أكلات بيتي، ومنيوهات مكتب بسعر يناسب توصيل المدينة.",
-    "quality.kicker": "ليه الخدمة بريميم",
-    "quality.heading": "كل طلب بيتدار كأنه إنتاج مطبخ كامل.",
+    "why.3.title": "تفاصيل أنيقة", "why.3.body": "اسم كل صنف على الصينية، ملاحظات تسخين، أدوات تقديم، وإضافات حلويات تخلي الاستضافة سهلة.",
+    "why.4.title": "روح إسكندرية", "why.4.body": "سمك، مشاوي، أكلات بيتي، ومنيوهات مكتب بسعر يناسب توصيل المدينة.",
+    "quality.kicker": "لمسة تليق بمناسبتك",
+    "quality.heading": "كل طلب بيتجهز بنظام مطبخ محترف.",
     "quality.1.title": "كميات مؤكدة",
     "quality.1.body": "عدد الضيوف والصواني والإضافات وطريقة التقديم بيتراجعوا قبل العربون.",
     "quality.2.title": "خطة وصول سخن",
     "quality.2.body": "التوصيل بيتخطط حسب الزحمة والتجهيز والتسخين وترتيب التقديم.",
-    "quality.3.title": "خدمة بليبل",
-    "quality.3.body": "الصواني ممكن توصل بليبل للحساسية ودرجة الشطة وملاحظات التقديم.",
+    "quality.3.title": "كل صنف واضح",
+    "quality.3.body": "الصواني ممكن توصل عليها اسم الصنف، الحساسية، درجة الشطة، وملاحظات التقديم.",
     "quality.4.title": "واتساب واضح",
     "quality.4.body": "كل عرض سعر وتعديل وعربون وتأكيد نهائي بيكون في شات واحد واضح.",
     "occasions.kicker": "مناسبات بنغطيها",
-    "occasions.heading": "متعملة على الطريقة اللي بنتلم بيها فعلاً.",
-    "occasions.family.title": "احتفالات العيلة", "occasions.family.body": "أعياد ميلاد، عمادة، غدا الجمعة، عزومات، وسفرة الأعياد.",
-    "occasions.office.title": "تموين شركات", "occasions.office.body": "غدا الفريق، ورش عمل، أيام تدريب، صواني نضيفة وعليها ليبل.",
+    "occasions.heading": "مصممة لطريقة تجمعاتنا المصرية.",
+    "occasions.family.title": "احتفالات العيلة", "occasions.family.body": "أعياد ميلاد، معمودية، غداء الجمعة، عزومات، وسفرة الأعياد.",
+    "occasions.office.title": "تموين شركات", "occasions.office.body": "غداء الفريق، ورش عمل، أيام تدريب، وصواني نضيفة عليها اسم كل صنف.",
     "occasions.weddings.title": "أفراح وخطوبة", "occasions.weddings.body": "ليلة حنة، خطوبة، فرح — منيو كامل، بوفيه، وطاولة حلويات.",
     "occasions.corporate.title": "مناسبات شركات", "occasions.corporate.body": "مؤتمرات، إطلاق منتجات، وأيام تدريب من ٥٠ لـ ٥٠٠ شخص.",
     "packages.kicker": "باقات التموين",
-    "packages.heading": "اختار باقة، أو كلمنا نظبطلك منيو على مزاجك.",
+    "packages.heading": "اختار باقة جاهزة، أو كلمنا نظبطلك منيو على ذوقك.",
     "packages.intro": "الأسعار بتتحسب على المكونات، عدد الضيوف، مسافة التوصيل، وطريقة التقديم. دي مجرد بداية — السعر النهائي بيتأكد قبل العربون.",
-    "packages.tab.small": "صغير وبيتي (10–40)",
-    "packages.tab.big": "مناسبات كبيرة (50–500+)",
+    "packages.tab.small": "عزومات وبيت (١٠–٤٠)",
+    "packages.tab.big": "مناسبات كبيرة (٥٠–٥٠٠+)",
     "packages.perGuest": "/ ضيف",
     "packages.bookCta": "احجز الباقة دي",
     "packages.small.feast.tag": "الأكثر طلباً",
     "packages.small.feast.title": "وليمة بيت مريان",
-    "packages.small.feast.body": "لأعياد الميلاد، غداء الجمعة، عمادة، وزيارات العيلة.",
+    "packages.small.feast.body": "لأعياد الميلاد، غداء الجمعة، المعمودية، وزيارات العيلة.",
     "packages.small.feast.1": "فرخة، كفتة، أو ملوخية كطبق رئيسي",
     "packages.small.feast.2": "أرز، محشي، مكرونة، أو بطاطس",
     "packages.small.feast.3": "سلطة، عيش، صلصات، وحلويات صغيرة",
-    "packages.small.feast.4": "حد أدنى 10 ضيوف · 48–72 ساعة",
+    "packages.small.feast.4": "حد أدنى ١٠ ضيوف · ٤٨–٧٢ ساعة",
     "packages.small.sea.tag": "سبيشال إسكندرية",
     "packages.small.sea.title": "سفرة نسمة البحر",
     "packages.small.sea.body": "سمك، أرز صيادية، مزة، وتقديم على الطريقة الساحلية.",
     "packages.small.sea.1": "سمك، صينية مأكولات بحرية، أو مشاوي مشكلة",
     "packages.small.sea.2": "مزة، سلطة، مخللات، وصوصات",
     "packages.small.sea.3": "طاولة حلويات اختيارية",
-    "packages.small.sea.4": "حد أدنى 12 ضيف · 72 ساعة",
+    "packages.small.sea.4": "حد أدنى ١٢ ضيف · ٧٢ ساعة",
     "packages.small.office.tag": "شركات",
     "packages.small.office.title": "غداء مكتب",
-    "packages.small.office.body": "صواني أو علب نضيفة وليبل لفرق العمل والاجتماعات والورش.",
+    "packages.small.office.body": "صواني أو علب نضيفة عليها اسم كل صنف لفرق العمل والاجتماعات والورش.",
     "packages.small.office.1": "أطباق رئيسية وأطباق جانبية سهلة التقديم",
     "packages.small.office.2": "خيارات نباتية متاحة",
-    "packages.small.office.3": "تغليف محكم وعليه ليبل",
-    "packages.small.office.4": "حد أدنى 15 ضيف · 48–72 ساعة",
+    "packages.small.office.3": "تغليف محكم وعليه اسم كل صنف",
+    "packages.small.office.4": "حد أدنى ١٥ ضيف · ٤٨–٧٢ ساعة",
     "packages.big.wedding.tag": "سيجنتشر",
     "packages.big.wedding.title": "فرح وخطوبة",
     "packages.big.wedding.body": "تموين كامل: مزة باردة، بوفيه ساخن، محطة تقطيع، طاولة حلويات.",
-    "packages.big.wedding.1": "3 أطباق رئيسية · 5 أطباق جانبية · محطة تقطيع",
+    "packages.big.wedding.1": "٣ أطباق رئيسية · ٥ أطباق جانبية · محطة تقطيع",
     "packages.big.wedding.2": "محطة مزة وسلطة باردة",
     "packages.big.wedding.3": "طاولة حلويات + خدمة شاي وقهوة",
     "packages.big.wedding.4": "ويترز، أطباق تسخين، ومفارش",
-    "packages.big.wedding.5": "حد أدنى 80 ضيف · 3–6 أسابيع",
+    "packages.big.wedding.5": "حد أدنى ٨٠ ضيف · ٣–٦ أسابيع",
     "packages.big.conf.tag": "شركات",
     "packages.big.conf.title": "مؤتمر وإطلاق",
     "packages.big.conf.body": "فطار، بوفيه غداء، استراحات قهوة، وتغليف نضيف يحمل اللوجو.",
     "packages.big.conf.1": "فطار كونتيننتال + استراحتين قهوة",
     "packages.big.conf.2": "غداء بوفيه ساخن بخيار نباتي",
     "packages.big.conf.3": "مناديل وعلب عليها اللوجو",
-    "packages.big.conf.4": "حد أدنى 60 شخص · أسبوعين",
+    "packages.big.conf.4": "حد أدنى ٦٠ شخص · أسبوعين",
     "packages.big.henna.tag": "احتفال",
     "packages.big.henna.title": "ليلة حنة وخطوبة",
-    "packages.big.henna.body": "منيو احتفالي مصري وشامي لـ 50–200 ضيف، مع محطة حلويات.",
+    "packages.big.henna.body": "منيو احتفالي مصري وشامي لـ ٥٠–٢٠٠ ضيف، مع محطة حلويات.",
     "packages.big.henna.1": "طبقين رئيسيين · مزة · مشاوي مباشرة اختيارية",
     "packages.big.henna.2": "محطة حلويات وعصاير ضمن الباقة",
     "packages.big.henna.3": "بوفيه متجهز ومزين",
-    "packages.big.henna.4": "حد أدنى 50 ضيف · 2–4 أسابيع",
+    "packages.big.henna.4": "حد أدنى ٥٠ ضيف · ٢–٤ أسابيع",
     "proof.kicker": "معايير الإنتاج",
     "proof.heading": "جاهزين لطلبات حقيقية، مش بس منيو شيك.",
     "proof.lead": "مدة التحضير الموصى بها",
-    "proof.events": "حفلة منذ 2018",
+    "proof.events": "مناسبة من ٢٠١٨",
     "proof.rating": "متوسط تقييم العملاء",
-    "proof.deposit": "العربون قابل للاسترداد حتى 7 أيام",
+    "proof.deposit": "العربون قابل للاسترداد حتى ٧ أيام",
     "menu.kicker": "بناء المنيو",
     "menu.heading": "أكلات مصرية مفضلة، بالصينية.",
-    "menu.intro": "اخلط الصواني حسب المناسبة. الصينية بتكفي 8–12 شخص غالباً. السعر النهائي بيتأكد قبل العربون.",
+    "menu.intro": "اخلط الصواني حسب المناسبة. الصينية بتكفي ٨–١٢ شخص غالباً. السعر النهائي بيتأكد قبل العربون.",
     "menu.cta": "احسب سعر منيو ←",
     "menu.mains": "أطباق رئيسية",
     "menu.mains.1": "بانيه فراخ، مكرونة بالكريمة، أو بطاطس مشوية",
@@ -454,7 +459,7 @@ const I18N = {
     "menu.desserts": "حلويات وإضافات",
     "menu.desserts.1": "بسبوسة، كنافة، أو طبق حلويات صغيرة",
     "menu.desserts.2": "كوب أرز باللبن بالمكسرات",
-    "menu.desserts.3": "أم علي (يكفي 10)",
+    "menu.desserts.3": "أم علي (يكفي ١٠)",
     "menu.desserts.4": "أدوات تقديم / ضيف",
     "menu.desserts.5": "توصيل داخل الإسكندرية",
     "menu.desserts.5p": "السعر حسب المنطقة",
@@ -483,16 +488,16 @@ const I18N = {
     "estimate.send": "ابعت التقدير ده على واتساب",
     "gallery.kicker": "صور", "gallery.heading": "سفرات طبخناها.",
     "process.kicker": "طريقة الحجز",
-    "process.heading": "من رسالة لسفرة في 4 خطوات.",
+    "process.heading": "من أول رسالة لسفرة جاهزة في ٤ خطوات.",
     "process.1.title": "ابعت تفاصيل المناسبة", "process.1.body": "التاريخ، عدد الضيوف، المنطقة، الأكل المفضل، والميزانية.",
     "process.2.title": "أكد المنيو", "process.2.body": "اختار باقة أو خلطة صواني، وظبط الشطة والكميات والحساسية والإضافات.",
     "process.3.title": "احجز الطلب", "process.3.body": "العربون بيأكد المكونات وميعاد إنتاج الطلب.",
-    "process.4.title": "استلم وقدّم", "process.4.body": "الأكل بيوصل عليه ليبل ومتجهز للتقديم.",
+    "process.4.title": "استلم وقدّم", "process.4.body": "الأكل بيوصل عليه اسم كل صنف ومتجهز للتقديم.",
     "reviews.kicker": "كلام العملاء",
     "reviews.heading": "العيلات ومنظمي الأفراح في إسكندرية بيحبوها.",
-    "reviews.1.body": "«استضفنا ٣٢ ضيف في البيت — الأكل كان حديث الليلة. الصواني وصلت سخنة، عليها ليبل، وفي الميعاد بالظبط. هنحجز تاني أكيد.»",
+    "reviews.1.body": "«استضفنا ٣٢ ضيف في البيت — الأكل كان حديث الليلة. الصواني وصلت سخنة، عليها اسم كل صنف، وفي الميعاد بالظبط. هنحجز تاني أكيد.»",
     "reviews.2.body": "«عملنا فرحنا ٢٢٠ شخص مع مريان. فريق محترم، بوفيه جميل، وطاولة الحلويات كانت تجنن.»",
-    "reviews.3.body": "«غدا الفريق بقى أسبوعي عندنا. العلب محكمة وعليها ليبل، والمنيو بيتغير كل أسبوع.»",
+    "reviews.3.body": "«غداء الفريق بقى أسبوعي عندنا. العلب محكمة وعليها اسم كل صنف، والمنيو بيتغير كل أسبوع.»",
     "location.kicker": "العنوان",
     "location.heading": "كليوباترا، الإسكندرية.",
     "location.body": "المطبخ في كليوباترا. بنوصل لكل الإسكندرية — سموحة، ستانلي، سان ستيفانو، ميامي، المنتزه، العجمي — وللساحل الشمالي عند الطلب. العنوان بالظبط بيتبعت بعد تأكيد الحجز.",
@@ -519,6 +524,8 @@ const I18N = {
     "contact.field.date": "تاريخ المناسبة", "contact.field.guests": "عدد الضيوف",
     "contact.field.event": "نوع المناسبة", "contact.field.area": "المنطقة في الإسكندرية",
     "contact.field.message": "إيه اللي مريان تطبخه؟",
+    "contact.placeholder.area": "كليوباترا، سموحة، المنتزه...",
+    "contact.placeholder.message": "مثال: عزومة عائلية لـ ١٨ شخص - كفتة، محشي، أرز، حلويات، وتوصيل لسموحة.",
     "contact.event.family": "تجمع عائلي", "contact.event.office": "مكتب / شركة",
     "contact.event.birthday": "عيد ميلاد", "contact.event.engagement": "خطوبة / حنة",
     "contact.event.wedding": "فرح", "contact.event.conference": "مؤتمر / إطلاق",
@@ -526,17 +533,20 @@ const I18N = {
     "contact.submit": "ابعت الحجز على واتساب",
     "contact.note": "مريان بترد عادة في ساعة لساعتين، من ٩ الصبح لـ ٩ بالليل بتوقيت مصر.",
     "cart.title": "طلبك",
-    "cart.empty": "السلة فاضية. تصفح المنيو واضغط + لإضافة صواني.",
+    "cart.empty": "السلة فاضية دلوقتي. اختار من المنيو واضغط + لإضافة الصواني.",
+    "cart.browse": "شوف المنيو",
     "cart.estimated": "السعر التقديري",
     "cart.note": "السعر النهائي بيتأكد من مريان قبل العربون.",
     "cart.checkout": "كمل للحجز",
-    "checkout.title": "اعمل طلب التموين",
+    "checkout.title": "أكد طلب التموين",
     "checkout.sub": "مريان بتأكد كل طلب شخصياً. تفاصيلك بتتبعت بأمان عبر واتساب وطريقة الدفع اللي تختارها.",
     "checkout.notes": "ملاحظات وتفضيلات (حساسية، شطة، توقيت)",
+    "checkout.placeholder.area": "كليوباترا، سموحة...",
+    "checkout.placeholder.notes": "أي تفاصيل لازم مريان تعرفها",
     "checkout.payment": "طريقة الدفع",
     "checkout.totalLabel": "السعر التقديري",
-    "checkout.place": "تأكيد الطلب",
-    "checkout.policy": "بإتمام الطلب أنت توافق على سياسة العربون والإلغاء (قابل للاسترداد حتى 7 أيام قبل المناسبة).",
+    "checkout.place": "إرسال الطلب",
+    "checkout.policy": "بإتمام الطلب أنت موافق على سياسة العربون والإلغاء (قابل للاسترداد حتى ٧ أيام قبل المناسبة).",
     "pay.instapay": "تحويل فوري بين البنوك (أي بنك مصري)",
     "pay.vodafone": "تحويل لمحفظة الشيف",
     "pay.bank.title": "تحويل بنكي", "pay.bank": "إيداع مباشر / بنك أونلاين",
@@ -549,10 +559,10 @@ const I18N = {
     "confirm.close": "إغلاق",
     "pwa.install": "نزل تطبيق سفرة مريان",
     "footer.tag": "تموين مصري معتمد",
-    "footer.intro": "تموين في كل أنحاء الإسكندرية، مصر — من غداء عائلي لـ 10 أشخاص لفرح لـ 500. من إعداد مريان أنيس.",
+    "footer.intro": "تموين مصري في أنحاء الإسكندرية — من غداء عائلي لـ ١٠ أشخاص لحد فرح لـ ٥٠٠ ضيف. من إعداد مريان أنيس.",
     "footer.explore": "تصفح", "footer.contact": "تواصل", "footer.area": "كليوباترا، الإسكندرية",
     "footer.social": "تواصل اجتماعي",
-    "footer.built": "متعمل باهتمام لأحلى سفرة مصرية.",
+    "footer.built": "مصمم بعناية لسفرة مصرية تليق بضيوفك.",
     "add.btn": "أضف",
   },
 };
@@ -594,12 +604,25 @@ const switchLang = () => {
 const $ = (sel, root = document) => root.querySelector(sel);
 const $$ = (sel, root = document) => [...root.querySelectorAll(sel)];
 
-const formatEgp = (amount) =>
+const formatNumber = (amount) =>
   new Intl.NumberFormat(document.documentElement.lang === "ar" ? "ar-EG" : "en-EG", {
+    maximumFractionDigits: 0,
+  }).format(amount);
+
+const formatEgp = (amount) => {
+  if (document.documentElement.lang === "ar") return `${formatNumber(amount)} جنيه`;
+  return new Intl.NumberFormat("en-EG", {
     style: "currency",
     currency: "EGP",
     maximumFractionDigits: 0,
   }).format(amount);
+};
+
+const formatEgpRange = (low, high) => {
+  if (low === high) return formatEgp(low);
+  if (document.documentElement.lang === "ar") return `${formatNumber(low)} - ${formatNumber(high)} جنيه`;
+  return `${formatEgp(low)} - ${formatEgp(high)}`;
+};
 
 const t = (key) => (I18N[document.documentElement.lang] || I18N.en)[key] || key;
 
@@ -750,7 +773,7 @@ function updateEstimate() {
   const [el, eh] = EXTRA_RANGES[extras] || EXTRA_RANGES.none;
   const low = guests * (pl + el);
   const high = guests * (ph + eh);
-  const rangeText = `${formatEgp(low)} – ${formatEgp(high)}`;
+  const rangeText = formatEgpRange(low, high);
   estimateOutput.value = rangeText;
   estimateOutput.textContent = rangeText;
 
@@ -762,14 +785,14 @@ function updateEstimate() {
           `الباقة: ${t(`estimate.opt.${pkg}`)}`,
           `عدد الضيوف: ${guests}`,
           `إضافات: ${t(`estimate.extras.${extras}`)}`,
-          `السعر التقديري: ${formatEgp(low)} – ${formatEgp(high)}`,
+          `السعر التقديري: ${formatEgpRange(low, high)}`,
         ]
       : [
           "Hello Sofret Mariane, I'd like a catering quote.",
           `Package: ${t(`estimate.opt.${pkg}`)}`,
           `Guests: ${guests}`,
           `Extras: ${t(`estimate.extras.${extras}`)}`,
-          `Estimated range: ${formatEgp(low)} – ${formatEgp(high)}`,
+          `Estimated range: ${formatEgpRange(low, high)}`,
         ];
     estimateWa.href = `https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(lines.join("\n"))}`;
   }
@@ -849,7 +872,11 @@ function refreshCartUI() {
   }
   if (cartBody) {
     if (cart.length === 0) {
-      cartBody.innerHTML = `<p class="cart-empty">${t("cart.empty")}</p>`;
+      cartBody.innerHTML = `
+        <div class="cart-empty">
+          <p>${t("cart.empty")}</p>
+          <button type="button" class="button ghost" data-cart-browse>${t("cart.browse")}</button>
+        </div>`;
     } else {
       cartBody.innerHTML = cart
         .map(
@@ -872,17 +899,25 @@ function refreshCartUI() {
   }
   if (cartTotal) {
     const { low, high } = cartTotals();
-    cartTotal.textContent = low === high ? formatEgp(low) : `${formatEgp(low)} – ${formatEgp(high)}`;
+    cartTotal.textContent = formatEgpRange(low, high);
   }
   const checkoutTotal = $("#checkoutTotal");
   if (checkoutTotal) {
     const { low, high } = cartTotals();
-    checkoutTotal.textContent = low === high ? formatEgp(low) : `${formatEgp(low)} – ${formatEgp(high)}`;
+    checkoutTotal.textContent = formatEgpRange(low, high);
   }
+  const checkoutButton = $("#cartCheckout");
+  if (checkoutButton) checkoutButton.disabled = cart.length === 0;
 }
 
 cartBody?.addEventListener("click", (e) => {
+  e.stopPropagation();
   const line = e.target.closest(".cart-line");
+  if (e.target.matches("[data-cart-browse]")) {
+    closeCart();
+    document.querySelector("#menu")?.scrollIntoView({ behavior: "smooth", block: "start" });
+    return;
+  }
   if (!line) return;
   const id = line.dataset.id;
   if (e.target.matches("[data-remove]")) removeFromCart(id);
@@ -1291,7 +1326,7 @@ trustNums.forEach((el) => trustObserver.observe(el));
 /* ---------- hero word rotator ------------------------------- */
 const HERO_ROTATE_WORDS = {
   en: ["table.", "wedding.", "office.", "celebration.", "henna night."],
-  ar: ["سفرة.", "فرح.", "مكتب.", "احتفال.", "ليلة حنة."],
+  ar: ["سفرة.", "فرح.", "عزومة.", "مكتب.", "ليلة حنة."],
 };
 const heroRotator = $("#heroRotator");
 let heroRotateIdx = 0;
