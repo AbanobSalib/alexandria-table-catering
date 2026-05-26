@@ -315,7 +315,7 @@ const I18N = {
     "hero.title.line2": "لكل سفرة.",
     "hero.title.for": "لكل",
     "hero.rotate.table": "سفرة.",
-    "hero.sub": "من غداء عائلي لـ 10 أشخاص حتى فرح لـ 500. أكل بيتي معتمد، دافي، في الوقت — والسعر يوصلك في دقائق على واتساب.",
+    "hero.sub": "من غدا العيلة لـ 10 أشخاص لحد فرح ٥٠٠ ضيف. أكل بيتي معتمد، دافي، وفي ميعاده — والسعر يجيلك في دقايق على واتساب.",
     "hero.cta.estimate": "احصل على عرض سعر",
     "hero.cta.menu": "شاهد المنيو",
     "hero.trust.events": "حفلة تم تموينها",
@@ -344,9 +344,9 @@ const I18N = {
     "presets.sea.body": "صيادية، سمك مشوي، مزة، أطباق ساحلية.",
     "chef.tag": "الشيف مريان أنيس",
     "chef.kicker": "الشيف",
-    "chef.heading": "شيف معتمدة. طبخ مصري دافي. تنظيم احترافي للمناسبات.",
-    "chef.body1": "مريان أنيس بتدير مطبخ تموين معتمد في كليوباترا، الإسكندرية. كل منيو بيتخطط حسب عدد الضيوف، التوقيت، الطزاجة، الحساسية، درجة الحرارة، وطريقة التقديم في المناسبة.",
-    "chef.body2": "من سبع سنين بتطبخ من عشاء عائلي صغير لحد أفراح 400+ ضيف. نفس الاهتمام في الاتنين: مطبخ نضيف، مكونات حقيقية، أسعار شفافة، توصيل في الموعد.",
+    "chef.heading": "شيف معتمدة · أكل بيتي على أصوله · تنظيم محترم للمناسبات.",
+    "chef.body1": "الشيف مريان أنيس بتطبخ من مطبخ بيتها المعتمد في كليوباترا بالإسكندرية. كل سفرة بيتم تخطيطها على مزاج المناسبة: عدد الضيوف، الميعاد، الطزاجة، الحساسية، درجة الشطة، وطريقة التقديم.",
+    "chef.body2": "بقالها سبع سنين بتطبخ كل حاجة، من عشاء عيلة صغير لحد فرح ٤٠٠+ ضيف. نفس الاهتمام في الاتنين: مطبخ نضيف، مكونات ١٠٠٪، أسعار صريحة، وتسليم في ميعاده.",
     "chef.cred1.title": "شيف معتمدة",
     "chef.cred1.body": "متدربة على المطبخ المصري التقليدي والمتوسطي وتقنيات التموين.",
     "chef.cred2.title": "مطبخ مرخص",
@@ -355,10 +355,10 @@ const I18N = {
     "chef.cred3.body": "ليبل على الصواني، خطة توصيل، أدوات تقديم، وتأكيد عربون.",
     "why.kicker": "ليه الضيوف بيفتكروها",
     "why.heading": "مش بس صواني. سفرة كاملة.",
-    "why.1.title": "تخطيط المنيو", "why.1.body": "مريان بتظبط الأكل على المناسبة والميزانية وعدد الضيوف والميعاد.",
-    "why.2.title": "كميات محسوبة", "why.2.body": "الصواني متجهزة عشان السفرة تبان عامرة من غير هدر أو لخبطة.",
-    "why.3.title": "تفاصيل أنيقة", "why.3.body": "ليبل، ملاحظات تسخين، أدوات تقديم، وإضافات حلويات.",
-    "why.4.title": "إيقاع إسكندري", "why.4.body": "سي فود، مشويات، أكلات بيتي، ومنيو مكتب بسعر يناسب التوصيل الداخلي.",
+    "why.1.title": "ظبط المنيو", "why.1.body": "مريان بتفصّل المنيو على المناسبة، الميزانية، عدد الضيوف، وميعاد التقديم.",
+    "why.2.title": "كميات محسوبة", "why.2.body": "الصواني محسوبة عشان السفرة تبان عامرة، من غير هدر ولا لخبطة آخر لحظة.",
+    "why.3.title": "تفاصيل أنيقة", "why.3.body": "ليبل على كل صينية، ملاحظات تسخين، أدوات تقديم، وإضافات حلويات تخلي الاستضافة سهلة.",
+    "why.4.title": "روح إسكندرية", "why.4.body": "سي فود، مشاوي، أكلات بيتي، ومنيوهات مكتب بسعر يناسب توصيل المدينة.",
     "quality.kicker": "ليه الخدمة بريميم",
     "quality.heading": "كل طلب بيتدار كأنه إنتاج مطبخ كامل.",
     "quality.1.title": "كميات مؤكدة",
@@ -369,15 +369,15 @@ const I18N = {
     "quality.3.body": "الصواني ممكن توصل بليبل للحساسية ودرجة الشطة وملاحظات التقديم.",
     "quality.4.title": "واتساب واضح",
     "quality.4.body": "كل عرض سعر وتعديل وعربون وتأكيد نهائي بيكون في شات واحد واضح.",
-    "occasions.kicker": "المناسبات اللي بنغطيها",
-    "occasions.heading": "متعمل عشان الطريقة اللي الناس بتتجمع بيها.",
-    "occasions.family.title": "احتفالات عائلية", "occasions.family.body": "أعياد ميلاد، عمادة، غداء جمعة، زيارات، وسفرة الأعياد.",
-    "occasions.office.title": "تموين الشركات", "occasions.office.body": "غداء فريق، ورش عمل، أيام تدريب، صواني نظيفة.",
-    "occasions.weddings.title": "أفراح وخطوبة", "occasions.weddings.body": "ليلة حنة، خطوبة، فرح — منيو كامل، بوفيه، طاولة حلويات.",
-    "occasions.corporate.title": "مناسبات شركات", "occasions.corporate.body": "مؤتمرات، إطلاق منتجات، أيام تدريب لـ 50 إلى 500 شخص.",
+    "occasions.kicker": "مناسبات بنغطيها",
+    "occasions.heading": "متعملة على الطريقة اللي بنتلم بيها فعلاً.",
+    "occasions.family.title": "احتفالات العيلة", "occasions.family.body": "أعياد ميلاد، عمادة، غدا الجمعة، عزومات، وسفرة الأعياد.",
+    "occasions.office.title": "تموين شركات", "occasions.office.body": "غدا الفريق، ورش عمل، أيام تدريب، صواني نضيفة وعليها ليبل.",
+    "occasions.weddings.title": "أفراح وخطوبة", "occasions.weddings.body": "ليلة حنة، خطوبة، فرح — منيو كامل، بوفيه، وطاولة حلويات.",
+    "occasions.corporate.title": "مناسبات شركات", "occasions.corporate.body": "مؤتمرات، إطلاق منتجات، وأيام تدريب من ٥٠ لـ ٥٠٠ شخص.",
     "packages.kicker": "باقات التموين",
-    "packages.heading": "اختار باقة، أو كلمنا لمنيو مخصص.",
-    "packages.intro": "الأسعار حسب المكونات، عدد الضيوف، مسافة التوصيل، وطريقة التقديم. دي نطاقات إرشادية — السعر النهائي يتأكد قبل العربون.",
+    "packages.heading": "اختار باقة، أو كلمنا نظبطلك منيو على مزاجك.",
+    "packages.intro": "الأسعار بتتحسب على المكونات، عدد الضيوف، مسافة التوصيل، وطريقة التقديم. دي مجرد بداية — السعر النهائي بيتأكد قبل العربون.",
     "packages.tab.small": "صغير وبيتي (10–40)",
     "packages.tab.big": "مناسبات كبيرة (50–500+)",
     "packages.perGuest": "/ ضيف",
@@ -457,12 +457,12 @@ const I18N = {
     "menu.desserts.5": "توصيل داخل الإسكندرية",
     "menu.desserts.5p": "السعر حسب المنطقة",
     "menu.desserts.6": "ويتر / ساعة",
-    "estimate.kicker": "حاسبة الأسعار",
-    "estimate.heading": "احسب تقدير سريع قبل الحجز.",
-    "estimate.body": "اختار الباقة وعدد الضيوف والإضافات. التقدير بيتحدث مباشرة. لما تكون جاهز، ابعتها لمريان على واتساب.",
-    "estimate.point1": "أسعار شفافة — من غير رسوم خفية",
-    "estimate.point2": "العربون قابل للاسترداد حتى 7 أيام قبل المناسبة",
-    "estimate.point3": "تسعير خلال ساعتين في ساعات العمل",
+    "estimate.kicker": "حاسبة سريعة",
+    "estimate.heading": "خد تقدير في ثواني، قبل ما تحجز.",
+    "estimate.body": "اختار الباقة، عدد الضيوف، والإضافات. السعر بيتحسب لحظياً. لما تكون جاهز، ابعت التقدير لمريان على واتساب.",
+    "estimate.point1": "أسعار صريحة — من غير مصاريف خفية",
+    "estimate.point2": "العربون قابل للاسترداد لحد ٧ أيام قبل المناسبة",
+    "estimate.point3": "الرد في ساعتين خلال ساعات العمل",
     "estimate.field.package": "الباقة",
     "estimate.field.guests": "عدد الضيوف",
     "estimate.field.extras": "إضافات",
@@ -486,11 +486,11 @@ const I18N = {
     "process.2.title": "أكد المنيو", "process.2.body": "اختار باقة أو خلطة صواني، وظبط الشطة والكميات والحساسية والإضافات.",
     "process.3.title": "احجز الطلب", "process.3.body": "العربون بيأكد المكونات وميعاد إنتاج الطلب.",
     "process.4.title": "استلم وقدّم", "process.4.body": "الأكل بيوصل عليه ليبل ومتجهز للتقديم.",
-    "reviews.kicker": "آراء العملاء",
-    "reviews.heading": "محبوبين من العائلات ومنظمي المناسبات في الإسكندرية.",
-    "reviews.1.body": "«استضفنا 32 ضيف في البيت — الأكل كان حديث الليلة. الصواني وصلت سخنة، عليها ليبل، وفي الميعاد بالظبط. هنحجز تاني.»",
-    "reviews.2.body": "«عملنا فرح 220 شخص مع مريان. فريق محترف، بوفيه جميل، وطاولة الحلويات كانت لا تصدق.»",
-    "reviews.3.body": "«غداء الفريق بقى أسبوعي. العلب محكمة وعليها ليبل، والمنيو بيتغير عشان يفضل ممتع.»",
+    "reviews.kicker": "كلام العملاء",
+    "reviews.heading": "العيلات ومنظمي الأفراح في إسكندرية بيحبوها.",
+    "reviews.1.body": "«استضفنا ٣٢ ضيف في البيت — الأكل كان حديث الليلة. الصواني وصلت سخنة، عليها ليبل، وفي الميعاد بالظبط. هنحجز تاني أكيد.»",
+    "reviews.2.body": "«عملنا فرحنا ٢٢٠ شخص مع مريان. فريق محترم، بوفيه جميل، وطاولة الحلويات كانت تجنن.»",
+    "reviews.3.body": "«غدا الفريق بقى أسبوعي عندنا. العلب محكمة وعليها ليبل، والمنيو بيتغير كل أسبوع.»",
     "location.kicker": "العنوان",
     "location.heading": "كليوباترا، الإسكندرية.",
     "location.body": "المطبخ في كليوباترا. بنوصل لكل الإسكندرية — سموحة، ستانلي، سان ستيفانو، ميامي، المنتزه، العجمي — وللساحل الشمالي عند الطلب. العنوان بالظبط بيتبعت بعد تأكيد الحجز.",
@@ -501,17 +501,17 @@ const I18N = {
     "social.kicker": "تابع سفرة مريان",
     "social.heading": "منيو جديد وسفرة جديدة كل أسبوع.",
     "social.body": "صور أكل يومية، ريلز من المطبخ، منيو أسبوعي، ولقطات من المناسبات — على فيسبوك وانستجرام.",
-    "faq.kicker": "أسئلة شائعة", "faq.heading": "إجابات قبل ما تسأل.",
-    "faq.1.q": "أقدر أطلب من غير ما أعرف المنيو بالظبط؟", "faq.1.a": "أيوه. ابعت التاريخ وعدد الضيوف والمنطقة والميزانية — مريان هتقترح منيو متوازن.",
-    "faq.2.q": "هل تعملوا تموين أفراح ومناسبات شركات؟", "faq.2.a": "أيوه — بنعمل مناسبات من 50 إلى 500+ ضيف بما فيها تجهيز البوفيه، الويترز، أطباق التسخين، وطاولات الحلويات.",
-    "faq.3.q": "محتاج أحجز قبلها بكام؟", "faq.3.a": "48–72 ساعة للطلبات الصغيرة، 2–4 أسابيع للمناسبات الكبيرة. أحياناً ممكن في آخر لحظة — كلمنا للتأكد.",
-    "faq.4.q": "فين المطبخ؟", "faq.4.a": "كليوباترا، الإسكندرية. العنوان بالظبط بيتبعت بعد تأكيد طلبات الاستلام.",
-    "faq.5.q": "هل المنيو يقدر يستوعب حساسية أو ضيوف نباتيين؟", "faq.5.a": "أيوه — اكتب الملاحظات الغذائية قبل التسعير عشان المنيو يتخطط صح.",
-    "faq.6.q": "إزاي الدفع؟", "faq.6.a": "عربون بيأكد الطلب (50% للمناسبات الكبيرة). الباقي عند التوصيل. إنستاباي، فودافون كاش، تحويل بنكي، فيزا، أو كاش.",
-    "faq.7.q": "بتوصلوا بره الإسكندرية؟", "faq.7.a": "أيوه — الساحل الشمالي في الصيف بشكل منتظم، والقاهرة عند الطلب مع تسعير توصيل منفصل.",
+    "faq.kicker": "أسئلة شائعة", "faq.heading": "إجابات قبل ما تكلمنا.",
+    "faq.1.q": "أقدر أطلب من غير ما أعرف المنيو بالظبط؟", "faq.1.a": "أيوه. ابعت التاريخ، عدد الضيوف، المنطقة، والميزانية — مريان هترشحلك منيو متوازن.",
+    "faq.2.q": "بتعملوا تموين أفراح ومناسبات شركات؟", "faq.2.a": "أيوه — بنعمل مناسبات من ٥٠ لـ ٥٠٠+ ضيف، شامل البوفيه، الويترز، أطباق التسخين، وطاولات الحلويات.",
+    "faq.3.q": "محتاج أحجز قبلها بكام؟", "faq.3.a": "٤٨–٧٢ ساعة للطلبات الصغيرة، و٢–٤ أسابيع للمناسبات الكبيرة. أحياناً بنوسع في آخر لحظة — كلمنا نشوف.",
+    "faq.4.q": "فين المطبخ؟", "faq.4.a": "كليوباترا، الإسكندرية. العنوان بالظبط بيوصلك بعد ما الطلب يتأكد.",
+    "faq.5.q": "بتستوعبوا الحساسية والنباتيين؟", "faq.5.a": "أيوه — قول الملاحظات الغذائية قبل التسعير عشان نظبط المنيو صح.",
+    "faq.6.q": "الدفع بيتم إزاي؟", "faq.6.a": "عربون بيأكد الطلب (٥٠٪ للمناسبات الكبيرة). الباقي عند التوصيل. إنستاباي، فودافون كاش، تحويل بنكي، فيزا، أو كاش.",
+    "faq.7.q": "بتوصلوا بره الإسكندرية؟", "faq.7.a": "أيوه — الساحل الشمالي في الصيف بشكل منتظم، والقاهرة عند الطلب وبتسعير توصيل منفصل.",
     "contact.kicker": "احجز سفرة مريان",
-    "contact.heading": "قول لمريان التاريخ وعدد الضيوف والأكل اللي بتحبه.",
-    "contact.body": "التوصيل والاستلام في كل الإسكندرية. عنوان المطبخ بالظبط بيفضل خاص لحد ما الطلب يتأكد.",
+    "contact.heading": "قول لمريان التاريخ، عدد الضيوف، والأكل اللي على بالك.",
+    "contact.body": "التوصيل والاستلام في كل الإسكندرية. عنوان المطبخ بالظبط بيفضل خاص لحد ما طلبك يتأكد.",
     "contact.ch.whatsapp": "واتساب", "contact.ch.phone": "تليفون", "contact.ch.email": "إيميل",
     "contact.field.name": "الاسم", "contact.field.phone": "تليفون أو واتساب",
     "contact.field.date": "تاريخ المناسبة", "contact.field.guests": "عدد الضيوف",
@@ -522,7 +522,7 @@ const I18N = {
     "contact.event.wedding": "فرح", "contact.event.conference": "مؤتمر / إطلاق",
     "contact.event.other": "أخرى",
     "contact.submit": "ابعت الحجز على واتساب",
-    "contact.note": "مريان بترد عادة خلال 1–2 ساعة، من 9 صباحاً لـ 9 مساءً بتوقيت مصر.",
+    "contact.note": "مريان بترد عادة في ساعة لساعتين، من ٩ الصبح لـ ٩ بالليل بتوقيت مصر.",
     "cart.title": "طلبك",
     "cart.empty": "السلة فاضية. تصفح المنيو واضغط + لإضافة صواني.",
     "cart.estimated": "السعر التقديري",
@@ -1419,6 +1419,60 @@ const splitHeadingLetters = () => {
   $$(".split-text").forEach((el) => io.observe(el));
 };
 
+/* ---------- inject Egyptian arabesque dividers between sections ---- */
+const injectOrnaments = () => {
+  const sections = $$(
+    "main > section.chef-section, main > section.signature-section, main > section.quality-section, main > section.event-section, main > section#packages, main > section.proof-section, main > section#menu, main > section.estimate-section, main > section#gallery, main > section#process, main > section#reviews, main > section#location, main > section.social-section, main > section#faq, main > section#contact"
+  );
+  sections.forEach((s) => {
+    if (s.previousElementSibling?.classList?.contains("ornament")) return;
+    /* skip if right after the hero (hero already has its own decoration) */
+    const orn = document.createElement("div");
+    orn.className = "ornament";
+    /* darker variant when the previous section is dark */
+    const prev = s.previousElementSibling;
+    const prevBg = prev ? getComputedStyle(prev).backgroundColor : "";
+    if (prev && prev.classList && (prev.classList.contains("event-section") || prev.classList.contains("proof-section") || prev.classList.contains("estimate-section"))) {
+      orn.classList.add("dark");
+    }
+    s.parentNode.insertBefore(orn, s);
+  });
+};
+
+/* ---------- convert Western numerals to Arabic-Indic in AR mode ---- */
+const AR_DIGITS = ["٠","١","٢","٣","٤","٥","٦","٧","٨","٩"];
+const toArDigits = (txt) => String(txt).replace(/[0-9]/g, (d) => AR_DIGITS[+d]);
+const toEnDigits = (txt) => String(txt).replace(/[٠-٩]/g, (d) => String(AR_DIGITS.indexOf(d)));
+
+const localizeDigits = (root = document.body) => {
+  const lang = document.documentElement.lang === "ar" ? "ar" : "en";
+  const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, {
+    acceptNode(node) {
+      const p = node.parentElement;
+      if (!p) return NodeFilter.FILTER_REJECT;
+      if (p.closest("script, style, input, textarea, select, code")) return NodeFilter.FILTER_REJECT;
+      if (lang === "ar" && /[0-9]/.test(node.nodeValue)) return NodeFilter.FILTER_ACCEPT;
+      if (lang === "en" && /[٠-٩]/.test(node.nodeValue)) return NodeFilter.FILTER_ACCEPT;
+      return NodeFilter.FILTER_REJECT;
+    },
+  });
+  const nodes = [];
+  let n;
+  while ((n = walker.nextNode())) nodes.push(n);
+  nodes.forEach((node) => {
+    node.nodeValue = lang === "ar" ? toArDigits(node.nodeValue) : toEnDigits(node.nodeValue);
+  });
+};
+
+/* re-localize digits whenever lang changes */
+new MutationObserver((records) => {
+  records.forEach((r) => {
+    if (r.attributeName === "lang") {
+      setTimeout(() => localizeDigits(), 60);
+    }
+  });
+}).observe(document.documentElement, { attributes: true });
+
 /* ---------- init -------------------------------------------- */
 applyLang(getLang());
 armReveals();
@@ -1427,4 +1481,6 @@ syncPaymentReadiness();
 onScroll();
 injectAurora();
 injectQuickCTA();
+injectOrnaments();
 splitHeadingLetters();
+localizeDigits();
