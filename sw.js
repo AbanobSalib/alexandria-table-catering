@@ -5,7 +5,7 @@
    - cache-first for images so the app feels snappy
 */
 
-const VERSION = "sm-v6-platform-pages-photos";
+const VERSION = "sm-v7-arabic-polish";
 const SHELL = [
   "./",
   "index.html",
@@ -13,8 +13,8 @@ const SHELL = [
   "privacy.html",
   "terms.html",
   "support.html",
-  "styles.css?v=sm-v6-platform-pages-photos",
-  "script.js?v=sm-v6-platform-pages-photos",
+  "styles.css?v=sm-v7-arabic-polish",
+  "script.js?v=sm-v7-arabic-polish",
   "site.webmanifest",
   "assets/logo.svg",
   "assets/favicon.svg",
