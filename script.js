@@ -59,6 +59,8 @@ const I18N = {
     "hero.eyebrow": "Alexandria · Since 2018",
     "hero.title.line1": "Egyptian catering",
     "hero.title.line2": "for every table.",
+    "hero.title.for": "for every",
+    "hero.rotate.table": "table.",
     "hero.sub": "From a family lunch for 10 to a wedding for 500. Certified, warm, on time — and quoted in minutes by WhatsApp.",
     "hero.cta.estimate": "Get a free quote",
     "hero.cta.menu": "See the menu",
@@ -311,6 +313,8 @@ const I18N = {
     "hero.eyebrow": "الإسكندرية · منذ 2018",
     "hero.title.line1": "تموين مصري",
     "hero.title.line2": "لكل سفرة.",
+    "hero.title.for": "لكل",
+    "hero.rotate.table": "سفرة.",
     "hero.sub": "من غداء عائلي لـ 10 أشخاص حتى فرح لـ 500. أكل بيتي معتمد، دافي، في الوقت — والسعر يوصلك في دقائق على واتساب.",
     "hero.cta.estimate": "احصل على عرض سعر",
     "hero.cta.menu": "شاهد المنيو",
@@ -899,6 +903,13 @@ const closeCart = () => {
 cartFab?.addEventListener("click", openCart);
 $("#cartClose")?.addEventListener("click", closeCart);
 overlay?.addEventListener("click", () => { closeCart(); closeAllModals(); });
+
+/* click outside the cart drawer (mobile + desktop) closes it */
+document.addEventListener("click", (e) => {
+  if (!cartDrawer?.classList.contains("is-open")) return;
+  if (e.target.closest("#cartDrawer") || e.target.closest("#cartFab") || e.target.closest(".add-btn") || e.target.closest(".package-cta")) return;
+  closeCart();
+});
 
 /* ---------- wire menu items: inject "+" buttons ------------- */
 const parseMoneyRange = (text) => {

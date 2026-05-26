@@ -44,7 +44,6 @@ Then confirm these live values across `index.html`:
 |------|--------------|
 | `+20 122 322 6196` | Mariane's formatted number |
 | `wa.me/201223226196` | Mariane's WhatsApp link |
-| `hello@sofretmariane.com` | your real email |
 | `facebook.com/sofretmariane` | real Facebook URL if handle differs |
 | `instagram.com/sofretmariane` | real Instagram URL |
 | `tiktok.com/@sofretmariane` | real TikTok URL |

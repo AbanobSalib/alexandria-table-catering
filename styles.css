@@ -2193,7 +2193,7 @@ html[dir="rtl"] .footer-grid a:hover { transform: translateX(-4px); }
   inset-block: 0;
   inset-inline-end: 0;
   z-index: 80;
-  width: min(420px, 96vw);
+  width: min(420px, 88vw);
   display: grid;
   grid-template-rows: auto 1fr auto;
   background: var(--cream);

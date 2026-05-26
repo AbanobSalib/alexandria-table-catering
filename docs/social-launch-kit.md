@@ -40,7 +40,7 @@ When you create each profile, **keep the same handle (`sofretmariane`)** so ever
 - Cover photo: `assets/social-cover.jpg`
 - Profile photo: logo PNG
 - About → Short description (EN/AR — see below)
-- Contact: WhatsApp number, hello@sofretmariane.com
+- Contact: WhatsApp number only (no email)
 - Location: Cleopatra, Alexandria (don't post exact street — only neighborhood)
 - Hours: Sat–Thu 9–21
 - Buttons: enable "Send Message" + "Call now" + "Visit website"
@@ -209,7 +209,6 @@ Then confirm these href values in `index.html`:
 
 - `wa.me/201223226196`
 - `+20 122 322 6196`
-- `hello@sofretmariane.com` → real inbox
 - `facebook.com/sofretmariane`, `instagram.com/sofretmariane`, `tiktok.com/@sofretmariane` if the handle differs
 
 Push the change → GitHub Pages rebuilds automatically.
