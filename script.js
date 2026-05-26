@@ -62,6 +62,7 @@ const I18N = {
     "hero.title.line2": "for every table.",
     "hero.title.for": "for every",
     "hero.rotate.table": "table.",
+    "hero.status.text": "Now taking orders for May & June",
     "hero.sub": "From a family lunch for 10 to a wedding for 500. Certified, warm, on time — and quoted in minutes by WhatsApp.",
     "hero.cta.estimate": "Get a free quote",
     "hero.cta.menu": "See the menu",
@@ -322,6 +323,7 @@ const I18N = {
     "hero.title.line2": "لكل سفرة.",
     "hero.title.for": "لكل",
     "hero.rotate.table": "سفرة.",
+    "hero.status.text": "بنستقبل حجوزات مايو ويونيو دلوقتي",
     "hero.sub": "من غداء عيلة لـ ١٠ أشخاص لحد فرح لـ ٥٠٠ ضيف. أكل مصري دافي، معتمد، وفي ميعاده — وعرض السعر يوصلك في دقايق على واتساب.",
     "hero.cta.estimate": "احصل على عرض سعر",
     "hero.cta.menu": "شاهد المنيو",
@@ -1305,23 +1307,13 @@ const animateCount = (el, target) => {
   };
   requestAnimationFrame(tick);
 };
+/* Counter animation disabled — it caught mid-flight (showing "1.9★" instead of "4.9★")
+   and broke decimals + symbols. The static numbers read fine without animation. */
 const trustNums = document.querySelectorAll(".hero-trust strong");
-const trustObserver = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (!entry.isIntersecting) return;
-    const el = entry.target;
-    if (el.dataset.animated) return;
-    el.dataset.animated = "1";
-    const raw = el.textContent.trim();
-    const num = parseInt(raw, 10);
-    if (!Number.isNaN(num) && raw.match(/^\d/)) {
-      el.dataset.suffix = raw.replace(/^\d+/, "");
-      animateCount(el, num);
-    }
-    trustObserver.unobserve(el);
-  });
+trustNums.forEach((el) => {
+  /* preserve original text against the lang-switch i18n loop */
+  if (el.dataset.trust) el.textContent = el.dataset.trust;
 });
-trustNums.forEach((el) => trustObserver.observe(el));
 
 /* ---------- hero word rotator ------------------------------- */
 const HERO_ROTATE_WORDS = {

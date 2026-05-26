@@ -5,7 +5,7 @@
    - cache-first for images so the app feels snappy
 */
 
-const VERSION = "sm-v10-arabic-logo";
+const VERSION = "sm-v11-hero-v2";
 const SHELL = [
   "./",
   "index.html",
@@ -13,8 +13,8 @@ const SHELL = [
   "privacy.html",
   "terms.html",
   "support.html",
-  "styles.css?v=sm-v10-arabic-logo",
-  "script.js?v=sm-v10-arabic-logo",
+  "styles.css?v=sm-v11-hero-v2",
+  "script.js?v=sm-v11-hero-v2",
   "site.webmanifest",
   "assets/logo.svg",
   "assets/favicon.svg",

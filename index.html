@@ -47,7 +47,7 @@
     <link rel="preload" as="image" href="assets/mariane-anis-enhanced.jpg" />
 
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700;800;900&family=Cairo:wght@400;600;700;800&family=Amiri:wght@400;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css?v=sm-v10-arabic-logo" />
+    <link rel="stylesheet" href="styles.css?v=sm-v11-hero-v2" />
 
     <script type="application/ld+json">
       {
@@ -160,34 +160,62 @@
     </header>
 
     <main id="main">
-      <section class="hero" id="top">
-        <div class="hero-media" aria-hidden="true">
-          <img src="https://images.unsplash.com/photo-1661994215679-cde7c2c5c060?auto=format&amp;fit=crop&amp;w=1900&amp;q=82" alt="" loading="eager" fetchpriority="high" />
-        </div>
-        <div class="hero-content">
-          <p class="eyebrow" data-i18n="hero.eyebrow">Alexandria · Since 2018</p>
-          <h1>
-            <span data-i18n="hero.title.line1">Egyptian catering</span>
-            <span class="hero-accent">
-              <span class="hero-accent-static" data-i18n="hero.title.for">for every</span>
-              <span class="hero-rotator" id="heroRotator" aria-live="polite">
-                <span class="hero-rotator-word" data-rotate="table" data-i18n="hero.rotate.table">table.</span>
-              </span>
+      <section class="hero hero-v2" id="top">
+        <div class="hero-bg" aria-hidden="true"></div>
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <span class="hero-status" data-i18n="hero.status">
+              <span class="hero-status-dot" aria-hidden="true"></span>
+              <span data-i18n="hero.status.text">Now taking orders for May &amp; June</span>
             </span>
-          </h1>
-          <p class="hero-sub" data-i18n="hero.sub">
-            From a family lunch for 10 to a wedding for 500. Certified, warm, on time — and quoted in minutes by WhatsApp.
-          </p>
-          <div class="hero-actions">
-            <a class="button primary" href="#estimate" data-i18n="hero.cta.estimate">Get a free quote</a>
-            <a class="button ghost" href="#menu" data-i18n="hero.cta.menu">See the menu</a>
+            <p class="eyebrow" data-i18n="hero.eyebrow">Alexandria · Since 2018</p>
+            <h1>
+              <span class="hero-line1" data-i18n="hero.title.line1">Egyptian catering</span>
+              <span class="hero-accent">
+                <span class="hero-accent-static" data-i18n="hero.title.for">for every</span>
+                <span class="hero-rotator" id="heroRotator" aria-live="polite">
+                  <span class="hero-rotator-word" data-rotate="table" data-i18n="hero.rotate.table">table.</span>
+                </span>
+              </span>
+            </h1>
+            <p class="hero-sub" data-i18n="hero.sub">
+              From a family lunch for 10 to a wedding for 500. Certified, warm, on time — and quoted in minutes by WhatsApp.
+            </p>
+            <div class="hero-actions">
+              <a class="button primary" href="#estimate" data-i18n="hero.cta.estimate">Get a free quote</a>
+              <a class="button ghost" href="#menu" data-i18n="hero.cta.menu">See the menu</a>
+            </div>
+            <ul class="hero-trust">
+              <li><strong data-trust="500">500+</strong><span data-i18n="hero.trust.events">events catered</span></li>
+              <li><strong data-trust="4.9★">4.9★</strong><span data-i18n="hero.trust.rating">average client rating</span></li>
+              <li><strong data-trust="48h">48h</strong><span data-i18n="hero.trust.lead">typical lead time</span></li>
+            </ul>
           </div>
-          <ul class="hero-trust">
-            <li><strong>500+</strong><span data-i18n="hero.trust.events">events catered</span></li>
-            <li><strong>4.9★</strong><span data-i18n="hero.trust.rating">average client rating</span></li>
-            <li><strong>48h</strong><span data-i18n="hero.trust.lead">typical lead time</span></li>
-          </ul>
+          <div class="hero-visual" aria-hidden="true">
+            <figure class="hero-card hero-card-1">
+              <img src="https://images.unsplash.com/photo-1661994215679-cde7c2c5c060?auto=format&amp;fit=crop&amp;w=900&amp;q=85" alt="" loading="eager" fetchpriority="high" />
+              <figcaption>
+                <span class="hero-card-tag">Signature</span>
+                <strong>Beit Mariane Feast</strong>
+                <span class="hero-card-meta">10–40 guests · EGP 185 / guest</span>
+              </figcaption>
+            </figure>
+            <figure class="hero-card hero-card-2">
+              <img src="https://images.unsplash.com/photo-1775181180462-18b20da9340e?auto=format&amp;fit=crop&amp;w=520&amp;q=82" alt="" loading="eager" />
+              <figcaption><strong>Koshari trays</strong></figcaption>
+            </figure>
+            <figure class="hero-card hero-card-3">
+              <img src="https://images.unsplash.com/photo-1565299507177-b0ac66763828?auto=format&amp;fit=crop&amp;w=520&amp;q=82" alt="" loading="eager" />
+              <figcaption><strong>Wedding buffet</strong></figcaption>
+            </figure>
+            <span class="hero-badge" role="img" aria-label="Five star rating">
+              <span class="hero-badge-stars">★★★★★</span>
+              <span class="hero-badge-text"><strong>4.9</strong> / 5</span>
+              <span class="hero-badge-sub">120+ reviews</span>
+            </span>
+          </div>
         </div>
+        <svg class="hero-wave" aria-hidden="true" viewBox="0 0 1440 80" preserveAspectRatio="none"><path d="M0,40 C240,80 480,0 720,30 C960,60 1200,20 1440,40 L1440,80 L0,80 Z" fill="currentColor"/></svg>
       </section>
 
       <section class="track-strip" aria-label="Pick your event size">
@@ -1015,11 +1043,11 @@
       </div>
     </footer>
 
-    <script src="script.js?v=sm-v10-arabic-logo"></script>
+    <script src="script.js?v=sm-v11-hero-v2"></script>
     <script>
       if ("serviceWorker" in navigator) {
         window.addEventListener("load", () => {
-          navigator.serviceWorker.register("sw.js?v=sm-v10-arabic-logo").catch(() => {});
+          navigator.serviceWorker.register("sw.js?v=sm-v11-hero-v2").catch(() => {});
         });
       }
     </script>
